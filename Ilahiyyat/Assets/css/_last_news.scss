@@ -1,0 +1,121 @@
+#last_news{
+	width: 100%;
+	padding: 40px;
+	.sermon_title{
+		width: 100%;
+		.img1{
+
+			width: 180px;
+			position: relative;
+			left: calc(50% - 90px);
+		}
+		.icon_mosque{
+			width: 140px;
+			height: 80px;
+			position: relative;
+			left: calc(50% - 70px);
+			.img2{
+			width: 30px;
+			position: relative;
+			
+			margin-bottom: 40px;
+			float: left;
+			}
+			.line{
+				width: 35px;
+				height: 1px;
+				background-color: black;
+				float: left;
+				position: relative;
+				margin-left: 10px;
+				margin-right: 10px;
+				top: 25px;
+			}
+		}
+		h2{
+			text-align: center;
+		}
+	}
+	.single_news{
+		width: 100%;
+		height: 100%;
+		&:hover{
+			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+		}
+		.news_img{
+			width: 100%;
+			overflow: hidden;
+			cursor: pointer;
+			img{
+			width: 100%;
+			height: 280px;
+			&:hover{
+				transform: scale(1.2);
+				transition:all .5s ease-in;
+			}
+		}
+		}
+		.news_date{
+			width: 100%;
+			height: 40px;
+			padding: 10px 20px;
+			svg{
+				float: left;
+				font-size: 18px;
+				color: $color_green;
+				margin-right: 10px;
+			}
+			p{
+				margin-bottom: 0px;
+				float: left;
+				font-size: 13px;
+				margin-right: 40px;
+				color: black;
+			}
+		}
+		.news_text{
+			width: 100%;
+			padding: 10px 20px;
+			h4{
+				color: $color_green;
+				
+				a{
+					text-decoration: none;
+					color: black;
+					cursor: pointer;
+					transition:.5s ease;
+					&:hover{
+						color: $color_green;
+					}
+				}
+			}
+			p{
+					font-size: 16px;
+					color: black;
+				}
+			.read_more{
+		width: 150px;
+		height: 40px;
+		text-align: center;
+		border: 1px solid $color_green;
+		position: relative;
+		line-height: 36px;
+		cursor: pointer;
+		transition:.5s ease;
+		margin-bottom: 20px;
+		&:hover{
+			background-color: $color_green;
+			a{
+				color: white;
+			}
+		}
+		a{
+			text-decoration: none;
+			color: $color_green;
+			
+		}
+	}
+		}
+	}
+
+}

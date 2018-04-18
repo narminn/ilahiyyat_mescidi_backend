@@ -1,0 +1,373 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="ilahiyyetModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Admin">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="admin_adi" Type="nvarchar" MaxLength="50" />
+          <Property Name="admin_email" Type="nvarchar" MaxLength="50" />
+          <Property Name="admin_şifrəsi" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Advertisement">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="elanin_adi" Type="nvarchar" MaxLength="50" />
+          <Property Name="elanin_şəkili" Type="nvarchar(max)" />
+          <Property Name="elanin_məzmunu" Type="nvarchar(max)" />
+          <Property Name="elanin_başlanqic_günü" Type="datetime" />
+          <Property Name="elanin_bitdiyi_gün" Type="datetime" />
+          <Property Name="elanin_yeri" Type="nvarchar" MaxLength="50" />
+          <Property Name="elanin_təşkilaçinin_adi" Type="nvarchar" MaxLength="50" />
+          <Property Name="elanin_təşkilaçinin_nomrəsi" Type="nvarchar" MaxLength="50" />
+          <Property Name="elanin_təşkilaçinin_email" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Books">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="kitabin_adi" Type="nvarchar" MaxLength="50" />
+          <Property Name="kitabin_faili" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="Contact">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="user_adi" Type="nvarchar" MaxLength="50" />
+          <Property Name="user_email" Type="nvarchar" MaxLength="50" />
+          <Property Name="user_nomresi" Type="nvarchar" MaxLength="50" />
+          <Property Name="user_mesaji" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="Gallery">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="şəkilin_adi" Type="nvarchar" MaxLength="50" />
+          <Property Name="şəkilin_kodu" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="News">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="xəberin_adi" Type="nvarchar" MaxLength="50" />
+          <Property Name="xəberin_məzmunu" Type="nvarchar(max)" />
+          <Property Name="xəberin_əlavə_edilən_gün" Type="datetime" />
+          <Property Name="xəberin_baxiş_sayi" Type="int" />
+          <Property Name="xəberin_şəkili" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="Pillar">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="şərtlərin_adi" Type="nvarchar" MaxLength="50" />
+          <Property Name="şərtlərin_şəkili" Type="nvarchar(max)" />
+          <Property Name="şərtlərin_məzmunu" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="Questions">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="sual" Type="nvarchar(max)" />
+          <Property Name="cavab" Type="nvarchar(max)" />
+          <Property Name="sual_user_adi" Type="nvarchar" MaxLength="50" />
+          <Property Name="sual_user_email" Type="nvarchar" MaxLength="50" />
+          <Property Name="sual_əlavə_edilən_gün" Type="nvarchar" MaxLength="50" />
+          <Property Name="sual_baxiş_sayi" Type="int" />
+        </EntityType>
+        <EntityType Name="Sermon">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="xutbə_adi" Type="nvarchar" MaxLength="50" />
+          <Property Name="xutbə_məzmunu" Type="nvarchar(max)" />
+          <Property Name="xutbə_audio" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="Slider">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="slider_şəkili" Type="nvarchar(max)" />
+          <Property Name="slider_məzmunu" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityContainer Name="ilahiyyetModelStoreContainer">
+          <EntitySet Name="Admin" EntityType="Self.Admin" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Advertisement" EntityType="Self.Advertisement" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Books" EntityType="Self.Books" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Contact" EntityType="Self.Contact" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Gallery" EntityType="Self.Gallery" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="News" EntityType="Self.News" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Pillar" EntityType="Self.Pillar" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Questions" EntityType="Self.Questions" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Sermon" EntityType="Self.Sermon" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Slider" EntityType="Self.Slider" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ilahiyyetModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Admin">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="admin_adi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="admin_email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="admin_şifrəsi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Advertisement">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="elanin_adi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="elanin_şəkili" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="elanin_məzmunu" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="elanin_başlanqic_günü" Type="DateTime" Precision="3" />
+          <Property Name="elanin_bitdiyi_gün" Type="DateTime" Precision="3" />
+          <Property Name="elanin_yeri" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="elanin_təşkilaçinin_adi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="elanin_təşkilaçinin_nomrəsi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="elanin_təşkilaçinin_email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Book">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="kitabin_adi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="kitabin_faili" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Contact">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="user_adi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="user_email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="user_nomresi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="user_mesaji" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Gallery">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="şəkilin_adi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="şəkilin_kodu" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="News">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="xəberin_adi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="xəberin_məzmunu" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="xəberin_əlavə_edilən_gün" Type="DateTime" Precision="3" />
+          <Property Name="xəberin_baxiş_sayi" Type="Int32" />
+          <Property Name="xəberin_şəkili" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Pillar">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="şərtlərin_adi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="şərtlərin_şəkili" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="şərtlərin_məzmunu" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Question">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="sual" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="cavab" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="sual_user_adi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="sual_user_email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="sual_əlavə_edilən_gün" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="sual_baxiş_sayi" Type="Int32" />
+        </EntityType>
+        <EntityType Name="Sermon">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="xutbə_adi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="xutbə_məzmunu" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="xutbə_audio" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Slider">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="slider_şəkili" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="slider_məzmunu" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityContainer Name="ilahiyyetEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Admins" EntityType="Self.Admin" />
+          <EntitySet Name="Advertisements" EntityType="Self.Advertisement" />
+          <EntitySet Name="Books" EntityType="Self.Book" />
+          <EntitySet Name="Contacts" EntityType="Self.Contact" />
+          <EntitySet Name="Galleries" EntityType="Self.Gallery" />
+          <EntitySet Name="News" EntityType="Self.News" />
+          <EntitySet Name="Pillars" EntityType="Self.Pillar" />
+          <EntitySet Name="Questions" EntityType="Self.Question" />
+          <EntitySet Name="Sermons" EntityType="Self.Sermon" />
+          <EntitySet Name="Sliders" EntityType="Self.Slider" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ilahiyyetModelStoreContainer" CdmEntityContainer="ilahiyyetEntities">
+          <EntitySetMapping Name="Admins">
+            <EntityTypeMapping TypeName="ilahiyyetModel.Admin">
+              <MappingFragment StoreEntitySet="Admin">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="admin_adi" ColumnName="admin_adi" />
+                <ScalarProperty Name="admin_email" ColumnName="admin_email" />
+                <ScalarProperty Name="admin_şifrəsi" ColumnName="admin_şifrəsi" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Advertisements">
+            <EntityTypeMapping TypeName="ilahiyyetModel.Advertisement">
+              <MappingFragment StoreEntitySet="Advertisement">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="elanin_adi" ColumnName="elanin_adi" />
+                <ScalarProperty Name="elanin_şəkili" ColumnName="elanin_şəkili" />
+                <ScalarProperty Name="elanin_məzmunu" ColumnName="elanin_məzmunu" />
+                <ScalarProperty Name="elanin_başlanqic_günü" ColumnName="elanin_başlanqic_günü" />
+                <ScalarProperty Name="elanin_bitdiyi_gün" ColumnName="elanin_bitdiyi_gün" />
+                <ScalarProperty Name="elanin_yeri" ColumnName="elanin_yeri" />
+                <ScalarProperty Name="elanin_təşkilaçinin_adi" ColumnName="elanin_təşkilaçinin_adi" />
+                <ScalarProperty Name="elanin_təşkilaçinin_nomrəsi" ColumnName="elanin_təşkilaçinin_nomrəsi" />
+                <ScalarProperty Name="elanin_təşkilaçinin_email" ColumnName="elanin_təşkilaçinin_email" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Books">
+            <EntityTypeMapping TypeName="ilahiyyetModel.Book">
+              <MappingFragment StoreEntitySet="Books">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="kitabin_adi" ColumnName="kitabin_adi" />
+                <ScalarProperty Name="kitabin_faili" ColumnName="kitabin_faili" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Contacts">
+            <EntityTypeMapping TypeName="ilahiyyetModel.Contact">
+              <MappingFragment StoreEntitySet="Contact">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="user_adi" ColumnName="user_adi" />
+                <ScalarProperty Name="user_email" ColumnName="user_email" />
+                <ScalarProperty Name="user_nomresi" ColumnName="user_nomresi" />
+                <ScalarProperty Name="user_mesaji" ColumnName="user_mesaji" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Galleries">
+            <EntityTypeMapping TypeName="ilahiyyetModel.Gallery">
+              <MappingFragment StoreEntitySet="Gallery">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="şəkilin_adi" ColumnName="şəkilin_adi" />
+                <ScalarProperty Name="şəkilin_kodu" ColumnName="şəkilin_kodu" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="News">
+            <EntityTypeMapping TypeName="ilahiyyetModel.News">
+              <MappingFragment StoreEntitySet="News">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="xəberin_adi" ColumnName="xəberin_adi" />
+                <ScalarProperty Name="xəberin_məzmunu" ColumnName="xəberin_məzmunu" />
+                <ScalarProperty Name="xəberin_əlavə_edilən_gün" ColumnName="xəberin_əlavə_edilən_gün" />
+                <ScalarProperty Name="xəberin_baxiş_sayi" ColumnName="xəberin_baxiş_sayi" />
+                <ScalarProperty Name="xəberin_şəkili" ColumnName="xəberin_şəkili" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Pillars">
+            <EntityTypeMapping TypeName="ilahiyyetModel.Pillar">
+              <MappingFragment StoreEntitySet="Pillar">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="şərtlərin_adi" ColumnName="şərtlərin_adi" />
+                <ScalarProperty Name="şərtlərin_şəkili" ColumnName="şərtlərin_şəkili" />
+                <ScalarProperty Name="şərtlərin_məzmunu" ColumnName="şərtlərin_məzmunu" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Questions">
+            <EntityTypeMapping TypeName="ilahiyyetModel.Question">
+              <MappingFragment StoreEntitySet="Questions">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="sual" ColumnName="sual" />
+                <ScalarProperty Name="cavab" ColumnName="cavab" />
+                <ScalarProperty Name="sual_user_adi" ColumnName="sual_user_adi" />
+                <ScalarProperty Name="sual_user_email" ColumnName="sual_user_email" />
+                <ScalarProperty Name="sual_əlavə_edilən_gün" ColumnName="sual_əlavə_edilən_gün" />
+                <ScalarProperty Name="sual_baxiş_sayi" ColumnName="sual_baxiş_sayi" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Sermons">
+            <EntityTypeMapping TypeName="ilahiyyetModel.Sermon">
+              <MappingFragment StoreEntitySet="Sermon">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="xutbə_adi" ColumnName="xutbə_adi" />
+                <ScalarProperty Name="xutbə_məzmunu" ColumnName="xutbə_məzmunu" />
+                <ScalarProperty Name="xutbə_audio" ColumnName="xutbə_audio" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Sliders">
+            <EntityTypeMapping TypeName="ilahiyyetModel.Slider">
+              <MappingFragment StoreEntitySet="Slider">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="slider_şəkili" ColumnName="slider_şəkili" />
+                <ScalarProperty Name="slider_məzmunu" ColumnName="slider_məzmunu" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

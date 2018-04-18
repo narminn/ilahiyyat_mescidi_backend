@@ -1,0 +1,88 @@
+#sermon{
+	width: 100%;
+	padding:40px;
+	.sermon_title{
+		width: 100%;
+		.img1{
+
+			width: 180px;
+			position: relative;
+			left: calc(50% - 90px);
+		}
+		.icon_mosque{
+			width: 140px;
+			height: 80px;
+			position: relative;
+			left: calc(50% - 70px);
+			.img2{
+			width: 30px;
+			position: relative;
+			
+			margin-bottom: 40px;
+			float: left;
+			}
+			.line{
+				width: 35px;
+				height: 1px;
+				background-color: black;
+				float: left;
+				position: relative;
+				margin-left: 10px;
+				margin-right: 10px;
+				top: 25px;
+			}
+		}
+		h2{
+			text-align: center;
+		}
+	}
+	.single_sermon{
+		border:1px solid rgba(0, 0, 0, 0.06);
+		padding: 20px;
+		transition: .5s ease;
+		margin-bottom: 30px;
+		cursor: pointer;
+		p{
+			color:black;
+		}
+		h4{
+			color: #777777;
+			&:hover{
+				color:$color_green;
+			}
+		}
+		&:hover{
+			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+
+		}
+		.sermon_audio{
+			width: 100%;
+			audio{
+				width: 232px;
+			}
+		}
+	}
+	.read_more{
+		width: 200px;
+		height: 40px;
+		margin-top: 20px;
+		text-align: center;
+		border: 1px solid $color_green;
+		position: relative;
+		left: calc(50% - 100px);
+		line-height: 36px;
+		cursor: pointer;
+		transition:1s ease;
+		&:hover{
+			background-color: $color_green;
+			a{
+				color: white;
+			}
+		}
+		a{
+			text-decoration: none;
+			color: $color_green;
+			
+		}
+	}
+}

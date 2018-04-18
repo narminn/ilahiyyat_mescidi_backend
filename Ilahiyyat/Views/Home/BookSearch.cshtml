@@ -1,0 +1,39 @@
+﻿@model IEnumerable<Ilahiyyat.Models.Book>
+@{
+    ViewBag.Title = "BookSearch";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="box1">
+    <div class="overlay2">
+        <img src="~/Assets/img/hdg-img.png" alt="">
+        <h1>KITABXANA</h1>
+    </div>
+</div>
+
+<div class="books">
+    <div class="overlay">
+        <div class="container">
+            <div class="row">
+                @foreach (Ilahiyyat.Models.Book item in Model)
+                {
+                    <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
+                        <div class="book">
+                            <a href="~/Home/Single_book/@item.id">
+                                <img src="~/Assets/img/book.jpeg">
+                                <p>@item.kitabin_adi</p>
+                            </a>
+                        </div>
+                    </div>
+                }
+
+
+
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+

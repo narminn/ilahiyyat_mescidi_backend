@@ -1,0 +1,19 @@
+﻿@model Ilahiyyat.ViewModel.SingleBookModel
+@{
+    ViewBag.Title = "Single_book";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+    <div class="box1">
+        <div class="overlay2">
+            <img src="~/Assets/img/hdg-img.png" alt="">
+            <h1>@Model._single_book.kitabin_adi</h1>
+        </div>
+    </div>
+    <div class="book">
+        
+        <iframe src="@Model._single_book.kitabin_faili" style="width: 100%;height: 700px;border: none;"></iframe>
+        @*<object data="@Model._single_book.kitabin_faili" type="" width="100%" height="700"></object>*@
+    </div>
+     

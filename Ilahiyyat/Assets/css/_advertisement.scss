@@ -1,0 +1,74 @@
+#advertisements{
+	width: 100%;
+	padding: 50px 0px;
+	.single_advert{
+		width: 100%;
+		margin-bottom: 30px;
+		cursor: pointer;
+
+		&:hover{
+			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+		}
+		.advert_img{
+			overflow: hidden;
+			cursor: pointer;
+			img{
+			width: 100%;
+			height: 360px;
+			object-fit:cover;
+			
+			
+		}
+		&:hover img{
+				transform:scale(1.2);
+				transition:all 1s ease-in;
+				filter:brightness(.5);
+			}
+		}
+		.advert_content{
+			width: 100%;
+			border: 1px solid rgba(192,192,192,.4);
+			padding: 20px 10px;
+			a{
+
+				text-decoration: none;
+				h4{
+				color:$color_green;
+				margin-bottom: 30px;
+			}
+		}
+		svg{
+		float: left;	
+		font-size: 24px;
+		margin-right: 10px;
+		color:$color_green;
+		}
+		p{
+			color: black;
+		}
+
+		}
+		.read_more{
+		width: 150px;
+		height: 40px;
+		text-align: center;
+		border: 1px solid $color_green;
+		position: relative;
+		line-height: 36px;
+		cursor: pointer;
+		transition:.5s ease;
+		margin-top: 20px;
+		&:hover{
+			background-color: $color_green;
+			a{
+				color: white;
+			}
+		}
+		a{
+			text-decoration: none;
+			color: $color_green;
+			
+		}
+	}
+	}
+}

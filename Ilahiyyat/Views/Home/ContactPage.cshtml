@@ -1,0 +1,106 @@
+﻿@{
+    ViewBag.Title = "Contact";
+}
+
+
+<div class="box1">
+    <div class="overlay2">
+        <img src="~/Assets/img/hdg-img.png" alt="">
+        <p>ƏLAQƏ</p>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <div id="map" style="width:100%;height:400px;margin-top:20px;border:2px solid darkgreen;"></div>
+            <script>
+                function initMap() {
+                    var uluru = { lat: 40.375653, lng: 49.807597 };
+                    var map = new google.maps.Map(document.getElementById('map'), {
+                        zoom: 18,
+                        center: uluru
+                    });
+                    var marker = new google.maps.Marker({
+                        position: uluru,
+                        map: map
+                    });
+                }
+            </script>
+            <script async defer
+                    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCX7Ki-L2zQJ188pW1CoqRUKqfE4UHBET0&callback=initMap">
+            </script>
+        </div>
+    </div>
+</div>
+<div class="contactUs">
+    <div class="over">
+        <div class="container">
+            <div class="row">
+                <form action="/Home/ContactPage" method="post">
+                    <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                        <div class="name">
+                            <input type="text" name="name" placeholder="Adınız" style="width:100%; height:100%">
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                        <div class="name">
+                            <input type="text" name="email" placeholder="Emailiniz" style="width:100%; height:100%">
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                        <div class="name">
+                            <input type="text" name="phone" placeholder="Nömrəniz" style="width:100%; height:100%">
+                        </div>
+                    </div>
+
+                    <div class="col-lg 12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="text">
+                            <!-- <textarea name="name" rows="12.1" cols="132"></textarea> -->
+                            <textarea name="message" id="" cols="136" rows="12" placeholder="Mesajınız"></textarea>
+                        </div>
+                    </div>
+
+
+                    <div class="col-lg 12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="submit float-center">
+                            <input class="submit" type="submit" value="Göndər">
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+    <div class="location">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                    <div class="box">
+                        <h4>ÜNVAN</h4>
+                        <i class="fas fa-map-marker"></i>
+                        <h5>Bakı şəh. Yasamal r. <br> Mirəli Seyidov küçəsi 31-38-ci kvartal </h5>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                    <div class="box">
+                        <h4>NÖMRƏ</h4>
+                        <i class="fas fa-phone"></i>
+                        <h5>
+                            Ev:(012)434 26 52 <br>
+                            Mob: (055)322 67 63
+                        </h5>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                    <div class="box">
+                        <h4>EMAİL</h4>
+                        <i class="far fa-envelope"></i>
+                        <h5>ilahiyyet@mail.az</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+

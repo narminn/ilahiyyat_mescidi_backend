@@ -1,0 +1,44 @@
+﻿@model IEnumerable<Ilahiyyat.Models.Gallery>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin_Panel/Views/Shared/Layout.cshtml";
+}
+
+<h2>Qalereya</h2>
+
+<p>
+    @Html.ActionLink("Yenisini Əlavə Et", "Create")
+</p>
+<div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
+    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+        <thead>
+            <tr>
+                <th>
+                    Şəkilin adi
+                </th>
+                <th>
+                    Şəkilin faili
+                </th>
+        </thead>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.şəkilin_adi)
+                </td>
+                <td>
+                    <img src="@item.şəkilin_kodu" style="width:200px; height:200px;object-fit:cover" />
+                </td>
+                <td>
+                    @Html.ActionLink("Yenilə", "Edit", new { id = item.id }) |
+                    @Html.ActionLink("Detalları", "Details", new { id = item.id }) |
+                    @Html.ActionLink("Sil", "Delete", new { id = item.id })
+                </td>
+            </tr>
+        }
+
+
+    </table>
+</div>

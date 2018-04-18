@@ -1,0 +1,1577 @@
+#header {
+  width: 100%;
+}
+#header .pray_times {
+  width: 100%;
+  height: 100%;
+  background-image: url(../img/top_bg.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+#header .pray_times h6 {
+  text-align: center;
+  color: white;
+  font-style: italic;
+}
+#header .pray_times .overlay {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 100, 0, 0.85);
+  padding: 25px 0px;
+}
+#header .pray_times .overlay .logo {
+  width: 80%;
+  height: 100%;
+  position: relative;
+}
+#header .pray_times .overlay .logo img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+}
+#header .pray_times .overlay h3 {
+  line-height: 110px;
+  position: relative;
+  color: white;
+  font-style: italic;
+}
+#header .pray_times .overlay p {
+  color: white;
+}
+#header .pray_times .time {
+  width: 80px;
+  height: 80px;
+  border-radius: 100%;
+  float: left;
+  border: 2px dotted white;
+  margin-left: 10px;
+  margin-top: 30px;
+  cursor: pointer;
+  transition: .7s ease;
+}
+#header .pray_times .time:hover {
+  border: 2px solid white;
+}
+#header .pray_times .time h6 {
+  color: white;
+  text-align: center;
+  font-size: 16px;
+  line-height: 50px;
+  margin-bottom: 0;
+}
+#header .pray_times .time p {
+  color: white;
+  text-align: center;
+  font-size: 15px;
+  line-height: 0px;
+}
+#header .menu {
+  width: 100%;
+}
+#header .menu .bg-light {
+  background-color: white !important;
+  border-bottom: 3px solid darkgreen;
+}
+#header .menu .bg-light li {
+  transition: 1.2s ease;
+}
+#header .menu .bg-light li a {
+  font-size: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+#header .menu .bg-light li a:hover {
+  color: darkgreen;
+}
+
+.fixed {
+  position: fixed;
+  top: 0;
+  z-index: 99;
+  width: 100%;
+}
+
+#slider {
+  width: 100%;
+  border-bottom: 4px solid darkgreen;
+  border-top: 4px solid darkgreen;
+}
+#slider .overlay {
+  background-color: black;
+  width: 100%;
+  height: 100%;
+}
+#slider .carousel-caption {
+  top: 35% !important;
+}
+#slider .carousel-caption h1 {
+  font-size: 60px;
+}
+#slider .carousel-caption p {
+  font-size: 26px;
+}
+
+#sermon {
+  width: 100%;
+  padding: 40px;
+}
+#sermon .sermon_title {
+  width: 100%;
+}
+#sermon .sermon_title .img1 {
+  width: 180px;
+  position: relative;
+  left: calc(50% - 90px);
+}
+#sermon .sermon_title .icon_mosque {
+  width: 140px;
+  height: 80px;
+  position: relative;
+  left: calc(50% - 70px);
+}
+#sermon .sermon_title .icon_mosque .img2 {
+  width: 30px;
+  position: relative;
+  margin-bottom: 40px;
+  float: left;
+}
+#sermon .sermon_title .icon_mosque .line {
+  width: 35px;
+  height: 1px;
+  background-color: black;
+  float: left;
+  position: relative;
+  margin-left: 10px;
+  margin-right: 10px;
+  top: 25px;
+}
+#sermon .sermon_title h2 {
+  text-align: center;
+}
+#sermon .single_sermon {
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  padding: 20px;
+  transition: .5s ease;
+  margin-bottom: 30px;
+  cursor: pointer;
+}
+#sermon .single_sermon p {
+  color: black;
+}
+#sermon .single_sermon h4 {
+  color: #777777;
+}
+#sermon .single_sermon h4:hover {
+  color: darkgreen;
+}
+#sermon .single_sermon:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+#sermon .single_sermon .sermon_audio {
+  width: 100%;
+}
+#sermon .single_sermon .sermon_audio audio {
+  width: 232px;
+}
+#sermon .read_more {
+  width: 200px;
+  height: 40px;
+  margin-top: 20px;
+  text-align: center;
+  border: 1px solid darkgreen;
+  position: relative;
+  left: calc(50% - 100px);
+  line-height: 36px;
+  cursor: pointer;
+  transition: 1s ease;
+}
+#sermon .read_more:hover {
+  background-color: darkgreen;
+}
+#sermon .read_more:hover a {
+  color: white;
+}
+#sermon .read_more a {
+  text-decoration: none;
+  color: darkgreen;
+}
+
+#pillars {
+  width: 100%;
+  height: 800px;
+  background-image: url(../img/piller.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#pillars .overlay_pillars {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 40px 40px 0px 40px;
+  position: relative;
+}
+#pillars .overlay_pillars .pillar_title {
+  width: 100%;
+}
+#pillars .overlay_pillars .pillar_title .img1 {
+  width: 180px;
+  position: relative;
+  left: calc(50% - 90px);
+}
+#pillars .overlay_pillars .pillar_title .icon_mosque {
+  width: 140px;
+  height: 80px;
+  position: relative;
+  left: calc(50% - 70px);
+}
+#pillars .overlay_pillars .pillar_title .icon_mosque .img2 {
+  width: 30px;
+  position: relative;
+  margin-bottom: 40px;
+  float: left;
+}
+#pillars .overlay_pillars .pillar_title .icon_mosque .line {
+  width: 35px;
+  height: 1px;
+  background-color: white;
+  float: left;
+  position: relative;
+  margin-left: 10px;
+  margin-right: 10px;
+  top: 25px;
+}
+#pillars .overlay_pillars .pillar_title h2 {
+  text-align: center;
+  color: white;
+}
+#pillars .overlay_pillars .pillars_content {
+  width: 100%;
+}
+#pillars .overlay_pillars .pillars_content .great_round {
+  width: 500px;
+  height: 250px;
+  border-top-right-radius: 500px;
+  border-top-left-radius: 500px;
+  background-color: white;
+  border: 1px solid white;
+  position: absolute;
+  top: 297%;
+  left: calc(50% - 250px);
+  text-align: center;
+  padding: 20px;
+}
+#pillars .overlay_pillars .pillars_content .great_round:before {
+  content: "";
+  border-radius: 500px 500px 0 0;
+  border-style: dotted dotted none;
+  border-width: 1px 1px medium;
+  border-color: white;
+  position: absolute;
+  top: -280px;
+  bottom: 0px;
+  left: -220px;
+  right: -220px;
+}
+#pillars .overlay_pillars .pillars_content .great_round h3 {
+  margin-top: 40px;
+  color: darkgreen;
+}
+#pillars .overlay_pillars .pillars_content .great_round p {
+  margin-top: 30px;
+  margin-bottom: 0px;
+  color: black;
+}
+#pillars .overlay_pillars .pillars_content .great_round img {
+  width: 30px;
+}
+#pillars .overlay_pillars .pillars_content .first, #pillars .overlay_pillars .pillars_content .second, #pillars .overlay_pillars .pillars_content .third, #pillars .overlay_pillars .pillars_content .fourth, #pillars .overlay_pillars .pillars_content .fifth {
+  width: 120px;
+  height: 120px;
+  border-radius: 100%;
+  background-color: white;
+  float: left;
+  position: absolute;
+  cursor: pointer;
+  transition: 1s ease;
+}
+#pillars .overlay_pillars .pillars_content .first:hover, #pillars .overlay_pillars .pillars_content .second:hover, #pillars .overlay_pillars .pillars_content .third:hover, #pillars .overlay_pillars .pillars_content .fourth:hover, #pillars .overlay_pillars .pillars_content .fifth:hover {
+  background-color: darkgreen;
+}
+#pillars .overlay_pillars .pillars_content .first:hover p, #pillars .overlay_pillars .pillars_content .second:hover p, #pillars .overlay_pillars .pillars_content .third:hover p, #pillars .overlay_pillars .pillars_content .fourth:hover p, #pillars .overlay_pillars .pillars_content .fifth:hover p {
+  color: white;
+}
+#pillars .overlay_pillars .pillars_content .first:hover:before, #pillars .overlay_pillars .pillars_content .second:hover:before, #pillars .overlay_pillars .pillars_content .third:hover:before, #pillars .overlay_pillars .pillars_content .fourth:hover:before, #pillars .overlay_pillars .pillars_content .fifth:hover:before {
+  border: 1px dotted darkgreen;
+}
+#pillars .overlay_pillars .pillars_content .first:before, #pillars .overlay_pillars .pillars_content .second:before, #pillars .overlay_pillars .pillars_content .third:before, #pillars .overlay_pillars .pillars_content .fourth:before, #pillars .overlay_pillars .pillars_content .fifth:before {
+  border: 1px dotted white;
+  content: "";
+  border-radius: 100%;
+  position: absolute;
+  top: -7px;
+  bottom: -7px;
+  left: -7px;
+  right: -7px;
+}
+#pillars .overlay_pillars .pillars_content .first p, #pillars .overlay_pillars .pillars_content .second p, #pillars .overlay_pillars .pillars_content .third p, #pillars .overlay_pillars .pillars_content .fourth p, #pillars .overlay_pillars .pillars_content .fifth p {
+  color: darkgreen;
+  line-height: 60px;
+  text-align: center;
+}
+#pillars .overlay_pillars .pillars_content .first img, #pillars .overlay_pillars .pillars_content .second img, #pillars .overlay_pillars .pillars_content .third img, #pillars .overlay_pillars .pillars_content .fourth img, #pillars .overlay_pillars .pillars_content .fifth img {
+  width: 40%;
+  margin-left: 35px;
+  margin-top: -40px;
+  object-fit: cover;
+}
+#pillars .overlay_pillars .pillars_content .first:hover, #pillars .overlay_pillars .pillars_content .second:hover, #pillars .overlay_pillars .pillars_content .third:hover, #pillars .overlay_pillars .pillars_content .fourth:hover, #pillars .overlay_pillars .pillars_content .fifth:hover {
+  font-size: 22px;
+}
+#pillars .overlay_pillars .pillars_content .first_line, #pillars .overlay_pillars .pillars_content .second_line, #pillars .overlay_pillars .pillars_content .third_line, #pillars .overlay_pillars .pillars_content .fourth_line, #pillars .overlay_pillars .pillars_content .fifth_line {
+  width: 215px;
+  height: 1px;
+  background-color: white;
+  position: absolute;
+}
+#pillars .overlay_pillars .pillars_content .first_line {
+  top: 700px;
+  left: 11%;
+  transform: rotate(34deg);
+}
+#pillars .overlay_pillars .pillars_content .fifth_line {
+  top: 700px;
+  right: 11%;
+  transform: rotate(-34deg);
+}
+#pillars .overlay_pillars .pillars_content .third_line {
+  top: 400px;
+  left: 41%;
+  transform: rotate(90deg);
+}
+#pillars .overlay_pillars .pillars_content .second_line {
+  top: 478px;
+  left: 21%;
+  transform: rotate(50deg);
+}
+#pillars .overlay_pillars .pillars_content .fourth_line {
+  top: 478px;
+  right: 21%;
+  transform: rotate(-50deg);
+}
+#pillars .overlay_pillars .pillars_content .first {
+  top: 540px;
+  left: 3%;
+}
+#pillars .overlay_pillars .pillars_content .second {
+  top: 285px;
+  left: 16%;
+}
+#pillars .overlay_pillars .pillars_content .third {
+  top: 100%;
+  left: calc(50% - 60px);
+}
+#pillars .overlay_pillars .pillars_content .fourth {
+  top: 285px;
+  right: 16%;
+}
+#pillars .overlay_pillars .pillars_content .fifth {
+  top: 540px;
+  right: 3%;
+}
+
+#last_news {
+  width: 100%;
+  padding: 40px;
+}
+#last_news .sermon_title {
+  width: 100%;
+}
+#last_news .sermon_title .img1 {
+  width: 180px;
+  position: relative;
+  left: calc(50% - 90px);
+}
+#last_news .sermon_title .icon_mosque {
+  width: 140px;
+  height: 80px;
+  position: relative;
+  left: calc(50% - 70px);
+}
+#last_news .sermon_title .icon_mosque .img2 {
+  width: 30px;
+  position: relative;
+  margin-bottom: 40px;
+  float: left;
+}
+#last_news .sermon_title .icon_mosque .line {
+  width: 35px;
+  height: 1px;
+  background-color: black;
+  float: left;
+  position: relative;
+  margin-left: 10px;
+  margin-right: 10px;
+  top: 25px;
+}
+#last_news .sermon_title h2 {
+  text-align: center;
+}
+#last_news .single_news {
+  width: 100%;
+  height: 100%;
+}
+#last_news .single_news:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+#last_news .single_news .news_img {
+  width: 100%;
+  overflow: hidden;
+  cursor: pointer;
+}
+#last_news .single_news .news_img img {
+  width: 100%;
+  height: 280px;
+}
+#last_news .single_news .news_img img:hover {
+  transform: scale(1.2);
+  transition: all .5s ease-in;
+}
+#last_news .single_news .news_date {
+  width: 100%;
+  height: 40px;
+  padding: 10px 20px;
+}
+#last_news .single_news .news_date svg {
+  float: left;
+  font-size: 18px;
+  color: darkgreen;
+  margin-right: 10px;
+}
+#last_news .single_news .news_date p {
+  margin-bottom: 0px;
+  float: left;
+  font-size: 13px;
+  margin-right: 40px;
+  color: black;
+}
+#last_news .single_news .news_text {
+  width: 100%;
+  padding: 10px 20px;
+}
+#last_news .single_news .news_text h4 {
+  color: darkgreen;
+}
+#last_news .single_news .news_text h4 a {
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+  transition: .5s ease;
+}
+#last_news .single_news .news_text h4 a:hover {
+  color: darkgreen;
+}
+#last_news .single_news .news_text p {
+  font-size: 16px;
+  color: black;
+}
+#last_news .single_news .news_text .read_more {
+  width: 150px;
+  height: 40px;
+  text-align: center;
+  border: 1px solid darkgreen;
+  position: relative;
+  line-height: 36px;
+  cursor: pointer;
+  transition: .5s ease;
+  margin-bottom: 20px;
+}
+#last_news .single_news .news_text .read_more:hover {
+  background-color: darkgreen;
+}
+#last_news .single_news .news_text .read_more:hover a {
+  color: white;
+}
+#last_news .single_news .news_text .read_more a {
+  text-decoration: none;
+  color: darkgreen;
+}
+
+#remember {
+  width: 100%;
+  background-image: url(../img/pattran-bg.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+#remember .overlay {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(232, 232, 232, 0.9);
+}
+#remember .overlay .remember_text {
+  padding: 80px 20px 20px 20px;
+}
+#remember .overlay .remember_text h5 {
+  color: darkgreen;
+}
+#remember .overlay .remember_text p {
+  color: black;
+}
+#remember .overlay .remember_img {
+  width: 100%;
+  margin-top: -18px;
+}
+#remember .overlay .remember_img img {
+  width: 280px;
+  float: left;
+  object-fit: cover;
+}
+
+#info_board {
+  width: 100%;
+  padding: 40px;
+}
+#info_board .info .info_title {
+  width: 100%;
+}
+#info_board .info .info_title .img1 {
+  width: 180px;
+  position: relative;
+  left: calc(50% - 90px);
+}
+#info_board .info .info_title .icon_mosque {
+  width: 140px;
+  height: 80px;
+  position: relative;
+  left: calc(50% - 70px);
+}
+#info_board .info .info_title .icon_mosque .img2 {
+  width: 30px;
+  position: relative;
+  margin-bottom: 40px;
+  float: left;
+}
+#info_board .info .info_title .icon_mosque .line {
+  width: 35px;
+  height: 1px;
+  background-color: black;
+  float: left;
+  position: relative;
+  margin-left: 10px;
+  margin-right: 10px;
+  top: 25px;
+}
+#info_board .info .info_title h2 {
+  text-align: center;
+}
+#info_board .info .info_items {
+  width: 100%;
+}
+#info_board .info .info_items .single_item {
+  width: 100%;
+  height: 200px;
+  margin-bottom: 30px;
+}
+#info_board .info .info_items .single_item .item_img {
+  width: 40%;
+  float: left;
+  overflow: hidden;
+  cursor: pointer;
+}
+#info_board .info .info_items .single_item .item_img img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+#info_board .info .info_items .single_item .item_img img:hover {
+  transform: scale(1.2);
+  transition: all .5s ease-in;
+}
+#info_board .info .info_items .single_item .item_text {
+  width: calc(60% - 20px);
+  float: left;
+  margin-left: 20px;
+}
+#info_board .info .info_items .single_item .item_text .read_more {
+  width: 200px;
+  height: 40px;
+  margin-top: 20px;
+  text-align: center;
+  border: 1px solid darkgreen;
+  position: relative;
+  line-height: 36px;
+  cursor: pointer;
+  transition: 1s ease;
+}
+#info_board .info .info_items .single_item .item_text .read_more:hover {
+  background-color: darkgreen;
+}
+#info_board .info .info_items .single_item .item_text .read_more:hover a {
+  color: white;
+}
+#info_board .info .info_items .single_item .item_text .read_more a {
+  text-decoration: none;
+  color: darkgreen;
+}
+#info_board .info .info_items .single_item a {
+  text-decoration: none;
+}
+#info_board .info .info_items .single_item a h5 {
+  margin-bottom: 20px;
+  color: black;
+}
+#info_board .info .info_items .single_item a h5:hover {
+  color: darkgreen;
+}
+#info_board .info .info_items .single_item p {
+  font-size: 16px;
+  color: black;
+}
+#info_board .timer_board .timer_title {
+  width: 100%;
+}
+#info_board .timer_board .timer_title .img1 {
+  width: 180px;
+  position: relative;
+  left: calc(50% - 90px);
+}
+#info_board .timer_board .timer_title .icon_mosque {
+  width: 140px;
+  height: 80px;
+  position: relative;
+  left: calc(50% - 70px);
+}
+#info_board .timer_board .timer_title .icon_mosque .img2 {
+  width: 30px;
+  position: relative;
+  margin-bottom: 40px;
+  float: left;
+}
+#info_board .timer_board .timer_title .icon_mosque .line {
+  width: 35px;
+  height: 1px;
+  background-color: black;
+  float: left;
+  position: relative;
+  margin-left: 10px;
+  margin-right: 10px;
+  top: 25px;
+}
+#info_board .timer_board .timer_title h2 {
+  text-align: center;
+}
+#info_board .timer_board .calendar {
+  width: 100%;
+}
+#info_board .timer_board .calendar #g2hFrame, #info_board .timer_board .calendar #h2gFrame {
+  position: relative;
+  left: calc(50% - 91px);
+}
+
+.box1 {
+  width: 100%;
+  height: 150px;
+  background-image: url(../img/pattran-bg.png);
+}
+.box1 .overlay2 {
+  width: 100%;
+  height: 150px;
+  background-color: #fff;
+  opacity: 0.82;
+}
+.box1 .overlay2 p {
+  text-align: center;
+  font-size: 2.5em;
+  font-weight: 600;
+  letter-spacing: 2px;
+  font-family: Roboto;
+}
+.box1 .overlay2 img {
+  margin-left: 45%;
+  margin-top: 20px;
+}
+
+#footer {
+  width: 100%;
+  background-image: url(../img/footer-bg.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+#footer .overlay {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(32, 32, 32, 0.98);
+  padding: 40px 0px 0px 0px;
+}
+#footer .overlay .logo {
+  width: 80%;
+  height: 100%;
+  position: relative;
+  float: left;
+}
+#footer .overlay .logo img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+}
+#footer .overlay h5 {
+  float: left;
+  line-height: 75px;
+  position: relative;
+  margin-left: 20px;
+  color: white;
+}
+    #footer .overlay .contact, #footer .overlay .text {
+        width: 100%;
+    }
+
+        #footer .overlay .contact a, #footer .overlay .text a {
+            text-decoration: none;
+            color: white;
+        }
+
+        #footer .overlay .contact ul, #footer .overlay .text ul {
+            padding: 0;
+        }
+
+            #footer .overlay .contact ul li, #footer .overlay .text ul li {
+                list-style-type: none;
+                margin-bottom: 10px;
+                color: white;
+            }
+
+                #footer .overlay .contact ul li svg, #footer .overlay .text ul li svg {
+                    color: white;
+                    font-size: 20px;
+                    margin-right: 10px;
+                    cursor: pointer;
+                    transition: .5s ease;
+                }
+
+                    #footer .overlay .contact ul li svg:hover, #footer .overlay .text ul li svg:hover {
+                        color: darkgreen;
+                    }
+
+    #footer .overlay .text {
+        padding: 30px 0px;
+    }
+
+    #footer .overlay p {
+        color: white;
+    }
+
+#advertisements {
+  width: 100%;
+  padding: 50px 0px;
+}
+#advertisements .single_advert {
+  width: 100%;
+  margin-bottom: 30px;
+  cursor: pointer;
+}
+#advertisements .single_advert:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+#advertisements .single_advert .advert_img {
+  overflow: hidden;
+  cursor: pointer;
+}
+#advertisements .single_advert .advert_img img {
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+}
+#advertisements .single_advert .advert_img:hover img {
+  transform: scale(1.2);
+  transition: all 1s ease-in;
+  filter: brightness(0.5);
+}
+#advertisements .single_advert .advert_content {
+  width: 100%;
+  border: 1px solid rgba(192, 192, 192, 0.4);
+  padding: 20px 10px;
+}
+#advertisements .single_advert .advert_content a {
+  text-decoration: none;
+}
+#advertisements .single_advert .advert_content a h4 {
+  color: darkgreen;
+  margin-bottom: 30px;
+}
+#advertisements .single_advert .advert_content svg {
+  float: left;
+  font-size: 24px;
+  margin-right: 10px;
+  color: darkgreen;
+}
+#advertisements .single_advert .advert_content p {
+  color: black;
+}
+#advertisements .single_advert .read_more {
+  width: 150px;
+  height: 40px;
+  text-align: center;
+  border: 1px solid darkgreen;
+  position: relative;
+  line-height: 36px;
+  cursor: pointer;
+  transition: .5s ease;
+  margin-top: 20px;
+}
+#advertisements .single_advert .read_more:hover {
+  background-color: darkgreen;
+}
+#advertisements .single_advert .read_more:hover a {
+  color: white;
+}
+#advertisements .single_advert .read_more a {
+  text-decoration: none;
+  color: darkgreen;
+}
+
+#single_news {
+  width: 100%;
+  padding: 50px 0px;
+}
+#single_news .news {
+  width: 100%;
+  margin-bottom: 30px;
+}
+#single_news .news:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+#single_news .news .news_img {
+  overflow: hidden;
+  cursor: pointer;
+}
+#single_news .news .news_img img {
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+}
+#single_news .news .news_img:hover img {
+  transform: scale(1.2);
+  transition: all 1s ease-in;
+  filter: brightness(0.5);
+}
+#single_news .news .news_content {
+  padding: 20px;
+  border: 1px solid rgba(192, 192, 192, 0.4);
+}
+#single_news .news .news_content h3 {
+  color: darkgreen;
+}
+#single_news .news .news_content p {
+  color: black;
+}
+#single_news .news .news_content .news_date {
+  width: 100%;
+  height: 40px;
+}
+#single_news .news .news_content .news_date .container {
+  padding: 0;
+}
+#single_news .news .news_content .news_date .container svg {
+  float: left;
+  font-size: 26px;
+  color: darkgreen;
+  margin-right: 10px;
+}
+#single_news .news .news_content .news_date .container p {
+  margin-bottom: 0px;
+  float: left;
+  font-size: 20px;
+  color: black;
+}
+#single_news .any_question {
+  width: 100%;
+  height: 40px;
+  text-align: center;
+  border: 1px solid darkgreen;
+  position: relative;
+  line-height: 36px;
+  cursor: pointer;
+  transition: .5s ease;
+  margin-top: 50px;
+  border-radius: 50px;
+}
+#single_news .any_question:hover {
+  background-color: darkgreen;
+}
+#single_news .any_question:hover a {
+  color: white;
+}
+#single_news .any_question a {
+  text-decoration: none;
+  color: darkgreen;
+}
+
+#single_advertis {
+  width: 100%;
+  padding: 50px 0px;
+}
+#single_advertis .advert {
+  width: 100%;
+  border: 1px solid rgba(192, 192, 192, 0.4);
+  cursor: pointer;
+  margin-bottom: 30px;
+}
+#single_advertis .advert p {
+  color: black;
+}
+#single_advertis .advert:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+#single_advertis .advert .advert_img {
+  overflow: hidden;
+  cursor: pointer;
+}
+#single_advertis .advert .advert_img img {
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+}
+#single_advertis .advert .advert_img:hover img {
+  transform: scale(1.2);
+  transition: all 1s ease-in;
+  filter: brightness(0.5);
+}
+#single_advertis .advert .calendar {
+  width: 100%;
+  padding: 20px;
+}
+#single_advertis .advert .calendar .date {
+  width: 100%;
+  padding: 15px;
+  background-color: darkgreen;
+  cursor: pointer;
+  transition: .5s ease;
+}
+#single_advertis .advert .calendar .date h2, #single_advertis .advert .calendar .date p {
+  color: white;
+  text-align: center;
+}
+#single_advertis .advert .calendar .date p {
+  font-size: 25px;
+}
+#single_advertis .advert .calendar .date:hover {
+  background-color: black;
+}
+#single_advertis .advert .organizer {
+  width: 100%;
+  padding: 20px;
+  background-color: rgba(192, 192, 192, 0.2);
+}
+#single_advertis .advert .organizer .info {
+  width: 100%;
+  height: 50px;
+}
+#single_advertis .advert .organizer .info svg, #single_advertis .advert .organizer .info p, #single_advertis .advert .organizer .info span {
+  float: left;
+}
+#single_advertis .advert .organizer .info svg {
+  color: darkgreen;
+  margin-right: 10px;
+}
+#single_advertis .advert .organizer .info p {
+  color: black;
+}
+#single_advertis .advert .content {
+  width: 100%;
+  padding: 20px;
+}
+#single_advertis .advert .content p {
+  color: black;
+}
+#single_advertis .any_question {
+  width: 100%;
+  height: 40px;
+  text-align: center;
+  border: 1px solid darkgreen;
+  position: relative;
+  line-height: 36px;
+  cursor: pointer;
+  transition: .5s ease;
+  margin-top: 50px;
+  border-radius: 50px;
+}
+#single_advertis .any_question:hover {
+  background-color: darkgreen;
+}
+#single_advertis .any_question:hover a {
+  color: white;
+}
+#single_advertis .any_question a {
+  text-decoration: none;
+  color: darkgreen;
+}
+
+#single_pillar {
+  width: 100%;
+  padding: 50px 0px;
+}
+#single_pillar .pillar {
+  width: 100%;
+}
+#single_pillar .pillar:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+#single_pillar .pillar .pillar_img {
+  overflow: hidden;
+  cursor: pointer;
+}
+#single_pillar .pillar .pillar_img img {
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+}
+#single_pillar .pillar .pillar_img:hover img {
+  transform: scale(1.2);
+  transition: all 1s ease-in;
+  filter: brightness(0.5);
+}
+#single_pillar .pillar .pillar_content {
+  padding: 20px;
+  border: 1px solid rgba(192, 192, 192, 0.4);
+}
+#single_pillar .pillar .pillar_content h3 {
+  color: darkgreen;
+}
+#single_pillar .pillar .pillar_content p {
+  color: black;
+}
+#single_pillar .any_question {
+  width: 100%;
+  height: 40px;
+  text-align: center;
+  border: 1px solid darkgreen;
+  position: relative;
+  line-height: 36px;
+  cursor: pointer;
+  transition: .5s ease;
+  margin-top: 50px;
+  border-radius: 50px;
+}
+#single_pillar .any_question:hover {
+  background-color: darkgreen;
+}
+#single_pillar .any_question:hover a {
+  color: white;
+}
+#single_pillar .any_question a {
+  text-decoration: none;
+  color: darkgreen;
+}
+
+#question_answer {
+  width: 100%;
+  padding: 50px 0px;
+}
+#question_answer .questions {
+  width: 100%;
+}
+#question_answer .questions .single_question {
+  width: 100%;
+  padding: 20px;
+  border: 1px solid rgba(192, 192, 192, 0.4);
+  box-shadow: 0 1px 5px -1px rgba(0, 0, 0, 0.13);
+  margin-bottom: 30px;
+}
+#question_answer .questions .single_question p {
+  color: black;
+}
+#question_answer .questions .single_question svg {
+  font-size: 20px;
+  margin-top: 10px;
+  margin-right: 10px;
+  color: darkgreen;
+}
+#question_answer .questions .single_question h3 {
+  cursor: pointer;
+  transition: .5s ease;
+}
+#question_answer .questions .single_question h3:hover {
+  color: darkgreen;
+}
+#question_answer .questions .single_question .line {
+  height: 1px;
+  width: 85%;
+  background-color: rgba(192, 192, 192, 0.6);
+}
+#question_answer .questions .single_question .date {
+  width: 100%;
+  height: 60px;
+}
+#question_answer .questions .single_question .date p {
+  float: left;
+  margin-top: 15px;
+  margin-right: 30px;
+}
+#question_answer .any_question {
+  width: 100%;
+  height: 40px;
+  text-align: center;
+  border: 1px solid darkgreen;
+  position: relative;
+  line-height: 36px;
+  cursor: pointer;
+  transition: .5s ease;
+  margin-bottom: 50px;
+  border-radius: 50px;
+}
+#question_answer .any_question:hover {
+  background-color: darkgreen;
+}
+#question_answer .any_question:hover a {
+  color: white;
+}
+#question_answer .any_question a {
+  text-decoration: none;
+  color: darkgreen;
+}
+
+#your_question {
+  width: 100%;
+  padding: 50px 0px;
+}
+#your_question .question_content {
+  width: 100%;
+  border: 1px solid rgba(192, 192, 192, 0.4);
+  cursor: pointer;
+  padding: 20px;
+}
+#your_question .question_content .box {
+  width: 100%;
+  margin-bottom: 40px;
+}
+#your_question .question_content .box:nth-child(3) label {
+  position: relative;
+  top: -150px;
+}
+#your_question .question_content .box label {
+  width: 100px;
+  color: darkgreen;
+}
+#your_question .question_content .box input {
+  width: 70%;
+}
+#your_question .question_content .box textarea {
+  width: 70%;
+}
+#your_question .question_content .submit input {
+  width: 250px;
+  height: 40px;
+  text-align: center;
+  border: 1px solid darkgreen;
+  position: relative;
+  line-height: 36px;
+  cursor: pointer;
+  transition: .5s ease;
+  margin-bottom: 20px;
+  position: relative;
+  left: calc(50% - 125px);
+  border-radius: 50px;
+}
+#your_question .question_content .submit input:hover {
+  background-color: darkgreen;
+  color: white;
+}
+
+.circle {
+  width: 50px;
+  height: 50px;
+  background: darkgreen;
+  border: none;
+  position: fixed;
+  bottom: 0px;
+  right: 40px;
+  border-radius: 100%;
+  box-shadow: 0px 2px 10px 0px rgba(19, 108, 191, 0.31);
+  display: none;
+  z-index: 88;
+}
+.circle:hover {
+  transition: .7s ease;
+}
+.circle svg {
+  margin-top: 14px;
+  margin-left: 15px;
+  font-size: 20px;
+  color: white;
+}
+
+.recent {
+  width: 100%;
+  padding: 10px;
+  background-color: rgba(192, 192, 192, 0.2);
+  margin-bottom: 30px;
+}
+.recent a {
+  color: black;
+  text-decoration: none;
+}
+.recent a:hover {
+  color: black;
+  text-decoration: none;
+}
+.recent p {
+  margin-top: 20px;
+  color: black;
+}
+.recent audio {
+  width: 70%;
+}
+.recent .line {
+  width: 100%;
+  height: 1px;
+  background-color: rgba(192, 192, 192, 0.8);
+}
+
+.box1 {
+  width: 100%;
+  height: 150px;
+  background-image: url(../img/pattran-bg.png);
+}
+.box1 .overlay2 {
+  width: 100%;
+  height: 150px;
+  background-color: #fff;
+  opacity: 0.82;
+}
+.box1 .overlay2 p {
+  text-align: center;
+  font-size: 2.5em;
+  font-weight: 600;
+  letter-spacing: 2px;
+  font-family: Roboto;
+}
+.box1 .overlay2 img {
+  margin-left: 45%;
+  margin-top: 20px;
+}
+
+.contactUs {
+  width: 100%;
+  padding: 25px;
+}
+.contactUs .over {
+  background-color: #fff;
+  opacity: 0.92;
+}
+.contactUs .name {
+  width: 100%;
+  border: 1px solid darkgreen;
+  margin-bottom: 30px;
+}
+.contactUs .name input {
+  padding: 10px;
+}
+.contactUs .text {
+  width: 100%;
+}
+.contactUs .text textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid darkgreen;
+}
+.contactUs .submit input {
+  width: 100%;
+  height: 50px;
+  margin-top: 20px;
+  background: #fff;
+  color: darkgreen;
+  border: 1px solid darkgreen;
+}
+.contactUs .submit input:hover {
+  background: darkgreen;
+  color: #fff;
+  transition: .8s ease;
+}
+
+.location {
+  width: 100%;
+  margin-top: 80px;
+  margin-bottom: 20px;
+}
+.location .box {
+  width: 100%;
+  height: 250px;
+  margin-bottom: 30px;
+  background: #f2f2f2;
+  transition: .7s ease;
+  cursor: pointer;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.location .box:hover {
+  transform: scale(1.1);
+}
+.location .box:hover {
+  background: darkgreen;
+  transition: .8s ease;
+}
+.location .box:hover h4 {
+  color: #fff;
+}
+.location .box:hover svg {
+  color: #fff;
+}
+.location .box:hover h5 {
+  color: #fff;
+}
+.location .box h4 {
+  text-align: center;
+  color: darkgreen;
+  padding: 15px;
+}
+.location .box h5 {
+  text-align: center;
+  color: #808080;
+  letter-spacing: 1px;
+  line-height: 35px;
+}
+.location svg {
+  font-size: 1.5em;
+  color: darkgreen;
+  position: relative;
+  left: 46%;
+}
+
+.box1 {
+  width: 100%;
+  height: 150px;
+  background-image: url(../img/pattran-bg.png);
+}
+.box1 .overlay2 {
+  width: 100%;
+  height: 150px;
+  background-color: #fff;
+  opacity: 0.82;
+}
+.box1 .overlay2 h1 {
+  text-align: center;
+  font-size: 2em;
+  font-weight: 600;
+  letter-spacing: 2px;
+  font-family: Roboto;
+}
+.box1 .overlay2 img {
+  margin-left: 45%;
+  margin-top: 20px;
+}
+
+.about {
+  width: 100%;
+  background-image: url("../img/philosophy-pt.png");
+}
+.about .overlay {
+  width: 100%;
+  background: rgba(0, 100, 0, 0.85);
+  width: 100%;
+  box-shadow: 0 25px 30px rgba(0, 0, 0, 0.5);
+  padding: 30px;
+}
+.about .overlay .box .imgBox {
+  width: 100%;
+  height: 500px;
+}
+.about .overlay .box .imgBox .first {
+  width: 50%;
+  height: 80%;
+  float: left;
+  margin-right: 20px;
+}
+.about .overlay .box .imgBox .first img {
+  width: 100%;
+  height: 49%;
+  object-fit: cover;
+  margin-bottom: 10px;
+  box-shadow: 10px 5px 5px rgba(18, 11, 11, 0.49);
+  transition: transform .8s;
+}
+.about .overlay .box .imgBox .first img:hover {
+  transform: scale(1.1);
+}
+.about .overlay .box .imgBox .second {
+  width: calc(50% - 20px);
+  height: 80%;
+  float: left;
+}
+.about .overlay .box .imgBox .second img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  box-shadow: 10px 5px 5px rgba(18, 11, 11, 0.49);
+  transition: transform .8s;
+}
+.about .overlay .box .imgBox .second img:hover {
+  transform: scale(1.1);
+}
+.about .overlay h2 {
+  color: #fff;
+  font-size: 2em;
+  padding: 20px;
+}
+
+p {
+  color: #fff;
+}
+
+.box1 {
+  width: 100%;
+  height: 150px;
+  background-image: url(../img/pattran-bg.png);
+}
+.box1 .overlay2 {
+  width: 100%;
+  height: 150px;
+  background-color: #fff;
+  opacity: 0.82;
+}
+.box1 .overlay2 p {
+  text-align: center;
+  font-size: 2.5em;
+  font-weight: 600;
+  letter-spacing: 2px;
+  font-family: Roboto;
+  color: black;
+}
+.box1 .overlay2 img {
+  margin-left: 45%;
+  margin-top: 20px;
+}
+
+.Bigbox {
+  width: 100%;
+  background-image: url(../img/philosophy-pt.png);
+}
+.Bigbox .overlay {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  background: rgba(0, 100, 0, 0.85);
+}
+
+.photo {
+  z-index: 99;
+}
+.photo img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  background-size: cover;
+  margin-top: 50px;
+}
+.photo img:hover {
+  filter: grayscale(0);
+  transform: scale(1.1);
+  transition: .8s ease;
+}
+
+.books {
+  width: 100%;
+  background-image: url(../img/rf-arabic-writing-books-bookshelf-row-syr100-e1442700696556.jpg);
+}
+.books .overlay {
+  width: 100%;
+  height: 100%;
+  background: rgba(71, 66, 66, 0.69);
+}
+.books .book {
+  width: 100%;
+  padding: 20px;
+}
+.books .book a {
+  text-decoration: none;
+}
+.books .book img {
+  width: 100%;
+  height: 100%;
+}
+.books .book p {
+  font-family: Cursive;
+  text-decoration: none;
+  font-size: 1.5em;
+  letter-spacing: 2px;
+}
+
+#single_sermon {
+  width: 100%;
+  padding: 50px 0px;
+}
+#single_sermon .srmn {
+  width: 100%;
+  margin-bottom: 30px;
+}
+#single_sermon .srmn:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+#single_sermon .srmn .sermon_img {
+  overflow: hidden;
+  cursor: pointer;
+}
+#single_sermon .srmn .sermon_img img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+#single_sermon .srmn .sermon_img:hover img {
+  transform: scale(1.2);
+  transition: all 1s ease-in;
+  filter: brightness(0.5);
+}
+#single_sermon .srmn .sermon_audio {
+  width: 100%;
+  padding: 10px;
+}
+#single_sermon .srmn .sermon_content {
+  width: 100%;
+  padding: 10px;
+}
+#single_sermon .srmn .sermon_content h4 {
+  color: darkgreen;
+}
+#single_sermon .srmn .sermon_content p {
+  color: black;
+}
+
+@media (max-width: 372px) {
+  #sermon .single_sermon .sermon_audio audio {
+    width: 200px !important;
+  }
+
+  #header .pray_times .overlay h3 {
+    font-size: 28px !important;
+  }
+
+  #header .pray_times .time {
+    width: 44px !important;
+    height: 44px !important;
+  }
+
+  #header .pray_times .time h6 {
+    font-size: 13px !important;
+    line-height: 30px !important;
+  }
+
+  #header .pray_times .time p {
+    font-size: 13px !important;
+  }
+
+  #pillars {
+    display: none !important;
+  }
+}
+@media (max-width: 372px) {
+  #sermon .single_sermon .sermon_audio audio {
+    width: 150px !important;
+  }
+}
+@media (max-width: 1200px) {
+  #pillars {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

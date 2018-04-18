@@ -1,0 +1,37 @@
+﻿@model Ilahiyyat.Models.Book
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/Admin_Panel/Views/Shared/Layout.cshtml";
+}
+
+<h2>Ətraflı</h2>
+
+<div>
+    <h4>Kitab</h4>
+    <hr />
+    <div class="col-md-10">
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.kitabin_adi)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.kitabin_adi)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.kitabin_faili)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.kitabin_faili)
+            </dd>
+
+        </dl>
+        </div>
+    </div>
+    <p>
+        @Html.ActionLink("Düzəlt", "Edit", new { id = Model.id }) |
+        @Html.ActionLink("Əvvələ Qayıt", "Index")
+    </p>

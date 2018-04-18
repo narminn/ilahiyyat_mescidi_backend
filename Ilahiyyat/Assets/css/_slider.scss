@@ -1,0 +1,19 @@
+#slider{
+	width: 100%;
+	border-bottom: 4px solid $color_green;
+	border-top: 4px solid $color_green;
+	.overlay{
+		background-color: black;
+		width: 100%;
+		height: 100%;
+	}
+	.carousel-caption{
+		top: 35% !important;
+		h1{
+			font-size: 60px;
+		}
+		p{
+			font-size: 26px;
+		}
+	}
+}

@@ -1,0 +1,37 @@
+﻿@model Ilahiyyat.Models.Slider
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/Admin_Panel/Views/Shared/Layout.cshtml";
+}
+
+<h2>Ətraflı</h2>
+
+<div>
+    <h4>Slayder</h4>
+    <hr />
+    <div class="col-md-10">
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.slider_şəkili)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.slider_şəkili)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.slider_məzmunu)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.slider_məzmunu)
+            </dd>
+
+        </dl>
+        </div>
+    </div>
+    <p>
+        @Html.ActionLink("Düzəlt", "Edit", new { id = Model.id }) |
+        @Html.ActionLink("Əvvələ Qayıt", "Index")
+    </p>

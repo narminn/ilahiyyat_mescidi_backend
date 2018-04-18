@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ilahiyyetModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Admin">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="admin_adi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="admin_email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="admin_şifrəsi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Advertisement">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="elanin_adi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="elanin_şəkili" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="elanin_məzmunu" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="elanin_başlanqic_günü" Type="DateTime" Precision="3" />
+    <Property Name="elanin_bitdiyi_gün" Type="DateTime" Precision="3" />
+    <Property Name="elanin_yeri" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="elanin_təşkilaçinin_adi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="elanin_təşkilaçinin_nomrəsi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="elanin_təşkilaçinin_email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Book">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="kitabin_adi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="kitabin_faili" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Contact">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="user_adi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="user_email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="user_nomresi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="user_mesaji" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Gallery">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="şəkilin_adi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="şəkilin_kodu" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="News">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="xəberin_adi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="xəberin_məzmunu" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="xəberin_əlavə_edilən_gün" Type="DateTime" Precision="3" />
+    <Property Name="xəberin_baxiş_sayi" Type="Int32" />
+    <Property Name="xəberin_şəkili" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Pillar">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="şərtlərin_adi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="şərtlərin_şəkili" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="şərtlərin_məzmunu" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Question">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="sual" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="cavab" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="sual_user_adi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="sual_user_email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="sual_əlavə_edilən_gün" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="sual_baxiş_sayi" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Sermon">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="xutbə_adi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="xutbə_məzmunu" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="xutbə_audio" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Slider">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="slider_şəkili" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="slider_məzmunu" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="ilahiyyetEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Admins" EntityType="Self.Admin" />
+    <EntitySet Name="Advertisements" EntityType="Self.Advertisement" />
+    <EntitySet Name="Books" EntityType="Self.Book" />
+    <EntitySet Name="Contacts" EntityType="Self.Contact" />
+    <EntitySet Name="Galleries" EntityType="Self.Gallery" />
+    <EntitySet Name="News" EntityType="Self.News" />
+    <EntitySet Name="Pillars" EntityType="Self.Pillar" />
+    <EntitySet Name="Questions" EntityType="Self.Question" />
+    <EntitySet Name="Sermons" EntityType="Self.Sermon" />
+    <EntitySet Name="Sliders" EntityType="Self.Slider" />
+  </EntityContainer>
+</Schema>

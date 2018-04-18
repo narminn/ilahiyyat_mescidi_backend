@@ -1,0 +1,83 @@
+﻿@model IEnumerable<Ilahiyyat.Models.Sermon>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin_Panel/Views/Shared/Layout.cshtml";
+}
+
+<div class="col-md-7">
+    <h2>Xütbələr</h2>
+
+    <p>
+        @Html.ActionLink("Yenisini Əlavə Et", "Create")
+    </p>
+</div>
+<div class="col-md-3">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="input-group form">
+                <input type="text" id="search" class="form-control" placeholder="Axtar...">
+                <span class="input-group-btn">
+                    <button class="btn btn-primary" type="button" id="btn">Axtar</button>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
+    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+        <thead>
+            <tr>
+                <th>
+                    Xütbənin adı
+                </th>
+                <th>
+                    Xütbənin məzmunu
+                </th>
+                <th>
+                    Xütbənin audiosu
+                </th>
+        </thead>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.xutbə_adi)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.xutbə_məzmunu)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.xutbə_audio)
+                </td>
+                <td>
+                    @Html.ActionLink("Yenilə", "Edit", new { id = item.id }) |
+                    @Html.ActionLink("Detallar", "Details", new { id = item.id }) |
+                    @Html.ActionLink("Sil", "Delete", new { id = item.id })
+                </td>
+            </tr>
+        }
+    </table>
+</div>
+<script src="https://code.jquery.com/jquery.js"></script>
+<script>
+    $(document).ready(function (e) {
+        var x;
+        $("#btn").click(function (e) {
+            x = $("#search").val();
+            console.log(x);
+            $.ajax({
+                type: "Get",
+                data: {
+                    search: x
+                },
+                url: "http://localhost:60851/Admin_Panel/Sermons/Search",
+                contentType: "Html",
+                success: function (response) {
+                    $("body").html(response)
+                }
+            })
+        })
+    })
+</script>

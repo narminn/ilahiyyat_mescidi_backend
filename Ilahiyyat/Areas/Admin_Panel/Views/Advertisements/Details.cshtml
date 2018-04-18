@@ -1,0 +1,93 @@
+﻿@model Ilahiyyat.Models.Advertisement
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/Admin_Panel/Views/Shared/Layout.cshtml";
+}
+
+<h2>Detallar</h2>
+
+<div>
+    <h4>Elan</h4>
+    <hr />
+    <div class="col-md-10">
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.elanin_adi)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.elanin_adi)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.elanin_şəkili)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.elanin_şəkili)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.elanin_məzmunu)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.elanin_məzmunu)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.elanin_başlanqic_günü)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.elanin_başlanqic_günü)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.elanin_bitdiyi_gün)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.elanin_bitdiyi_gün)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.elanin_yeri)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.elanin_yeri)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.elanin_təşkilaçinin_adi)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.elanin_təşkilaçinin_adi)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.elanin_təşkilaçinin_nomrəsi)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.elanin_təşkilaçinin_nomrəsi)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.elanin_təşkilaçinin_email)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.elanin_təşkilaçinin_email)
+            </dd>
+
+        </dl>
+    </div>
+    </div>
+    <p>
+        @Html.ActionLink("Düzəlt", "Edit", new { id = Model.id }) |
+        @Html.ActionLink("Əvvələ Qayıt", "Index")
+    </p>

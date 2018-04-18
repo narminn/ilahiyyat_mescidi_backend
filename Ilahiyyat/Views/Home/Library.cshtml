@@ -1,0 +1,76 @@
+﻿@model Ilahiyyat.ViewModel.LibraryModel
+@{
+    ViewBag.Title = "Library";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+<div class="box1">
+    <div class="overlay2">
+        <img src="~/Assets/img/hdg-img.png" alt="">
+        <h1>KITABXANA</h1>
+    </div>
+</div>
+
+
+<section class="books">
+    <div class="overlay">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12" style="margin:30px 0px;">
+                    <div class="input-group form">
+                        <input type="text" id="search" class="form-control" placeholder="Axtar...">
+                        <span class="input-group-btn">
+                            <button class="btn btn-primary" type="button" id="btn">Axtar</button>
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="container">
+            <div class="row">
+                @foreach (var item in Model._books)
+    {
+            <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
+                <div class="book">
+                    <a href="~/Home/Single_book/@item.id">
+                        <img src="~/Assets/img/book.jpeg">
+                        <p>@item.kitabin_adi</p>
+                    </a>
+                </div>
+            </div>
+}
+            </div>
+        </div>
+
+
+
+
+
+    </div>
+
+</section>
+<script src="https://code.jquery.com/jquery.js"></script>
+<script>
+    $(document).ready(function (e) {
+        var x;
+        $("#btn").click(function (e) {
+            x = $("#search").val();
+            console.log(x);
+            $.ajax({
+                type: "Get",
+                data: {
+                    search: x
+                },
+                url: "http://localhost:60851/Home/BookSearch",
+                contentType: "Html",
+                success: function (response) {
+                    $("body").html(response)
+                }
+            })
+        })
+    })
+</script>
+

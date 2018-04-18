@@ -1,0 +1,68 @@
+﻿@model Ilahiyyat.Models.News
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Areas/Admin_Panel/Views/Shared/Layout.cshtml";
+}
+
+<h2>Sil</h2>
+
+<h3>Silmək istədiyinizə əminsiniz?</h3>
+<div>
+    <h4>Xəbər</h4>
+    <hr />
+    <div class="col-md-10">
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.xəberin_adi)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.xəberin_adi)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.xəberin_məzmunu)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.xəberin_məzmunu)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.xəberin_əlavə_edilən_gün)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.xəberin_əlavə_edilən_gün)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.xəberin_baxiş_sayi)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.xəberin_baxiş_sayi)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.xəberin_şəkili)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.xəberin_şəkili)
+            </dd>
+
+        </dl>
+        </div>
+
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="form-actions no-color">
+                <input type="submit" value="Sil" class="btn btn-default" /> |
+                @Html.ActionLink("Əvvələ Qayıt", "Index")
+            </div>
+        }
+    </div>

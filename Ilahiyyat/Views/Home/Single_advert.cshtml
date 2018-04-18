@@ -1,0 +1,110 @@
+﻿@model Ilahiyyat.ViewModel.SingleAdvertModel
+@{
+    ViewBag.Title = "Single_advert";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+    <div class="box1">
+        <div class="overlay2">
+            <img src="~/Assets/img/hdg-img.png" alt="">
+            <p>ELAN</p>
+            <!-- <img src="~/Assets/img/mosque.png" alt=""> -->
+        </div>
+    </div>
+    <section id="single_advertis">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
+                    <div class="advert">
+                        <div class="advert_img">
+                            <img src="@Model._single_advert.elanin_şəkili" alt="">
+                        </div>
+                        <div class="calendar">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                                        <div class="date">
+                                            <h2>@Model._single_advert.elanin_başlanqic_günü.Value.Day / @Model._single_advert.elanin_başlanqic_günü.Value.Month</h2>
+                                           
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
+                                        <h3>@Model._single_advert.elanin_adi</h3>
+                                        <p>@Model._single_advert.elanin_yeri</p>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="organizer">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                        <div class="info">
+                                            <i class="far fa-calendar-check"></i><p>
+                                                Başlama tarixi:
+                                                @Model._single_advert.elanin_başlanqic_günü.ToString().AsDateTime().ToShortDateString()
+                                            </p>
+                                        </div>
+                                        <div class="info">
+                                            <i class="far fa-calendar-times"></i><p>
+                                                Bitmə tarixi:
+                                                @Model._single_advert.elanin_bitdiyi_gün.ToString().AsDateTime().ToShortDateString()
+                                            </p>
+                                        </div>
+                                        <div class="info">
+                                            <i class="fas fa-map-marker"></i>
+                                            <p>
+                                                Yer:
+                                                @Model._single_advert.elanin_yeri
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                        <div class="info">
+                                            <i class="far fa-user"></i><p>@Model._single_advert.elanin_təşkilaçinin_adi </p>
+                                        </div>
+                                        <div class="info">
+                                            <i class="fas fa-phone"></i><p>@Model._single_advert.elanin_təşkilaçinin_nomrəsi </p>
+                                        </div>
+                                        <div class="info">
+                                            <i class="fas fa-envelope"></i><p>@Model._single_advert.elanin_təşkilaçinin_email </p>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content">
+                            <p>
+                                @Model._single_advert.elanin_məzmunu
+                                </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                    <div class="recent">
+                        <h5>Son Elanlar</h5>
+                        @foreach (var item in Model._advert)
+    {
+                    <a href="/Home/Single_advert/@item.id"><p>@item.elanin_adi</p></a>
+                    <div class="line"></div>
+}
+                       
+                    </div>
+
+
+                    <iframe width="100%" height="315" style="margin-bottom: 30px;" src="https://www.youtube.com/embed/jWoXnWCt8tM" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                    <div class="any_question">
+                        <a href="/Home/QuestionPage">Bizə Sualınız Var?</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+   
+

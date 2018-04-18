@@ -1,0 +1,39 @@
+﻿@model Ilahiyyat.ViewModel.GaleryModel
+@{
+    ViewBag.Title = "Galery";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+    <div class="box1">
+        <div class="overlay2">
+            <img src="~/Assets/img/hdg-img.png" alt="">
+            <p>QALEREYA</p>
+        </div>
+    </div>
+    <div class="Bigbox">
+        <div class="overlay">
+            <div class="container">
+                <div class="row">
+                    @foreach (var item in Model._galery)
+    {
+                <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                    <a href="@item.şəkilin_kodu">
+                        <div class="photo">
+                            <img src="@item.şəkilin_kodu">
+                        </div>
+                    </a>
+                </div>
+}
+                  
+                 
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+

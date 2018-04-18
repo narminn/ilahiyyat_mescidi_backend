@@ -1,0 +1,43 @@
+﻿@model IEnumerable<Ilahiyyat.Models.Slider>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin_Panel/Views/Shared/Layout.cshtml";
+}
+
+<h2>Slayder</h2>
+
+<p>
+    @Html.ActionLink("Yenisini Əlavə Et", "Create")
+</p>
+<div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
+    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+        <thead>
+            <tr>
+                <th>
+                    Slayderin şəkili
+                </th>
+                <th>
+                    Slayderin məzmunu
+                </th>
+        </thead>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    <img src="@item.slider_şəkili" style="max-width:100%; max-height:200px" />
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.slider_məzmunu)
+                </td>
+                <td>
+                    @Html.ActionLink("Yenilə", "Edit", new { id = item.id }) |
+                    @Html.ActionLink("Detallar", "Details", new { id = item.id }) |
+                    @Html.ActionLink("Sil", "Delete", new { id = item.id })
+                </td>
+            </tr>
+        }
+        
+    </table>
+    </div>

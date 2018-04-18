@@ -1,0 +1,310 @@
+#pillars{
+	width: 100%;
+	height: 800px;
+	background-image: url(../img/piller.png);
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	.overlay_pillars{
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0,0,0,.8);
+		padding: 40px 40px 0px 40px;
+		position: relative;
+		.pillar_title{
+		width: 100%;
+		.img1{
+
+			width: 180px;
+			position: relative;
+			left: calc(50% - 90px);
+		}
+		.icon_mosque{
+			width: 140px;
+			height: 80px;
+			position: relative;
+			left: calc(50% - 70px);
+			.img2{
+			width: 30px;
+			position: relative;
+			
+			margin-bottom: 40px;
+			float: left;
+			}
+			.line{
+				width: 35px;
+				height: 1px;
+				background-color: white;
+				float: left;
+				position: relative;
+				margin-left: 10px;
+				margin-right: 10px;
+				top: 25px;
+			}
+		}
+		h2{
+			text-align: center;
+			color: white;
+			}
+		}
+		.pillars_content{
+			width: 100%;
+			.great_round{
+			width: 500px;
+			height: 250px;
+			border-top-right-radius: 500px;
+			border-top-left-radius: 500px;
+			background-color: white;
+			border:1px solid white;
+			position: absolute;
+			top: 297%;
+			left: calc(50% - 250px);
+			text-align: center;
+			padding: 20px;
+			&:before{
+				content: "";
+			    border-radius: 500px 500px 0 0;
+			    border-style: dotted dotted none;
+			    border-width: 1px 1px medium;
+			    border-color: white;
+			    position: absolute;
+			    top: -280px;
+			    bottom: 0px;
+			    left: -220px;
+			    right: -220px;
+			}
+			h3{
+				margin-top: 40px;
+				color: $color_green;
+
+			}
+			p{
+				margin-top: 30px;
+				margin-bottom: 0px;
+				color: black;
+			}
+			img{
+				width: 30px;
+			}
+}
+			.first, .second, .third, .fourth, .fifth{
+				width: 120px;
+				height: 120px;
+				border-radius: 100%;
+				background-color: white;
+				float: left;
+				position: absolute;
+				cursor: pointer;
+				transition:1s ease;
+				&:hover{
+					background-color: $color_green;
+					p{
+						color: white;
+					}
+					&:before{
+						border: 1px dotted $color_green;
+					}
+					
+				}
+				&:before{
+				border: 1px dotted white;
+				content: "";
+				border-radius: 100%;
+				position: absolute;
+				top:-7px;
+				bottom: -7px;
+				left: -7px;
+				right: -7px;
+			}
+				p{
+					color: $color_green;
+					line-height: 60px;
+					text-align: center;
+
+					
+				}
+				img{
+					width: 40%;
+					margin-left: 35px;
+					margin-top: -40px;
+					object-fit:cover;
+				}
+				&:hover{
+						font-size: 22px;
+					}
+
+			}
+			.first_line, .second_line, .third_line, .fourth_line, .fifth_line{
+				width: 215px;
+				height: 1px;
+				background-color: white;
+				position: absolute;
+				
+			}
+				.first_line{
+				top: 700px;
+				left: 11%;
+				transform:rotate(34deg);
+				}
+				.fifth_line{
+				top: 700px;
+				right: 11%;
+				transform: rotate(-34deg);
+				}
+				.third_line{
+					top: 400px;
+				    left: 41%;
+				    transform: rotate(90deg);
+				
+				}
+				.second_line{
+					top: 478px;
+				    left: 21%;
+				    transform: rotate(50deg);
+				}
+				.fourth_line{
+					top: 478px;
+				    right: 21%;
+				    transform: rotate(-50deg);
+				}
+			
+			.first{
+				top: 540px;
+				left: 3%;
+			}
+			.second{
+				top:285px;
+				left: 16%;
+			}
+			.third{
+				top: 100%;
+				left: calc(50% - 60px);
+			}
+			.fourth{
+				top:285px;
+				right: 16%;
+			}
+			.fifth{
+				top: 540px;
+				right:3%;
+			}
+		}
+// 		
+// 			&:before{
+// 				content: "";
+//     border-radius: 500px 500px 0 0;
+//     border-style: dotted dotted none;
+//     border-width: 1px 1px medium;
+//     border-color: white;
+//     position: absolute;
+//     top: -250px;
+//     bottom: 0px;
+//     left: -220px;
+//     right: -220px;
+// 			}
+// 			h3{
+// 				margin-top: 40px;
+// 				color: $color_green;
+
+// 			}
+// 			p{
+// 				margin-top: 30px;
+// 				margin-bottom: 0px;
+// 			}
+// 			img{
+// 				width: 30px;
+// 			}
+// 		}
+// 		.first, .second, .third, .fourth, .fifth{
+// 			width: 120px;
+// 			height: 120px;
+// 			border-radius: 100%;
+// 			background-color: white;
+// 			float: left;
+// 			position: absolute;
+// 			&:before{
+// 				border: 1px dotted white;
+// 				content: "";
+// 				border-radius: 100%;
+// 				position: absolute;
+// 				top:-7px;
+// 				bottom: -7px;
+// 				left: -7px;
+// 				right: -7px;
+// 			}
+// 		}
+// 		.first{
+// 			top: 420px;
+// 			left: -480px;
+// 			&:after{
+// 				border-right: 1px solid #ffffff;
+// 			    bottom: -73px;
+// 			    content: "";
+// 			    left: auto;
+// 			    position: absolute;
+// 			    right: -104px;
+// 			    top: 0;
+// 			    transform: rotate(-66deg) translate(-34px);
+// 			}
+// 		}
+// 		.second{
+// 			top: 150px;
+// 			left: -420px;
+// 			&:after{
+// 				border-right: 1px solid #ffffff;
+// 			    bottom: -118px;
+// 			    content: "";
+// 			    left: auto;
+// 			    position: absolute;
+// 			    right: -80px;
+// 			    top: 29px;
+// 			    transform: rotate(-41deg) translate(-61px)
+// 				}
+// 		}
+// 		.third{
+// 			top: 30px;
+// 			left: -230px;
+// 			&:after{
+// 			border-right: 1px solid #ffffff;
+// 			bottom: -188px;
+// 			content: "";
+// 			left: -70px;
+// 			position: absolute;
+// 			right: 60px;
+// 			top: 126px;
+// 			}
+// 		}
+// 		.fourth{
+// 			top: 150px;
+// 			left: -60px;
+// 			&:after{
+// 				    border-right: 1px solid #ffffff;
+//     bottom: -110px;
+//     content: "";
+//     left: -74px;
+//     position: absolute;
+//     right: auto;
+//     top: 29px;
+//     transform: rotate(36deg) translate(84px);
+
+// 			}
+// 		}
+// 		.fifth{
+// 			top: 420px;
+// 			left: 0px;
+// 			&:after{
+// 				border-right: 1px solid #ffffff;
+//     bottom: -77px;
+//     content: "";
+//     left: -82px;
+//     position: absolute;
+//     right: auto;
+//     top: 0;
+//     transform: rotate(67deg) translate(34px);
+// }
+
+
+			
+		}
+
+	}

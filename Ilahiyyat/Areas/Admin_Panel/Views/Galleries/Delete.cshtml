@@ -1,0 +1,44 @@
+﻿@model Ilahiyyat.Models.Gallery
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Areas/Admin_Panel/Views/Shared/Layout.cshtml";
+}
+
+<h2>Silmək</h2>
+
+<h3>Silmək istədiyinizə əminsiniz?</h3>
+<div>
+    <h4>Qalereya</h4>
+    <hr />
+    <div class="col-md-10">
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.şəkilin_adi)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.şəkilin_adi)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.şəkilin_kodu)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.şəkilin_kodu)
+            </dd>
+
+        </dl>
+        </div>
+
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="form-actions no-color">
+                <input type="submit" value="Sil" class="btn btn-default" /> |
+                @Html.ActionLink("Əvvələ Qayıt", "Index")
+            </div>
+        }
+    </div>

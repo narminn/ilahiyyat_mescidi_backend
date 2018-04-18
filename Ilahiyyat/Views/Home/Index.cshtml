@@ -1,0 +1,241 @@
+﻿@model Ilahiyyat.ViewModel.IndexModel
+@{
+    ViewBag.Title = "Home Page";
+}
+
+
+    <section id="slider">
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
+            </ol>
+            <div class="carousel-inner" role="listbox">
+                <div class="carousel-item active">
+
+                    <img src="~/Assets/img/1.jpg" alt="..." style="width: 100%">
+
+                    <div class="carousel-caption d-none d-md-block">
+
+                        <p>Əbu Hüreyrə (Allah ondan razı olsun) rəvayət edir ki, Peyğəmbər (ona Allahın salavatı və salamı olsun) belə buyurmuşdur: “Kim Allaha və axirət gününə iman gətiribsə, ya xeyir danışsın, ya da sussun. Kim Allaha və axirət gününə iman gətiribsə, qonşusuna yaxşılıq etsin. Kim Allaha və axirət gününə iman gətiribsə, qonağına yaxşılıq etsin.” [1] (əl-Buxari və Müslim rəvayət etmişlər.)</p>
+                    </div>
+                </div>
+                @foreach (var item in Model._slider)
+    {
+            <div class="carousel-item">
+                <img src="@item.slider_şəkili" alt="..." style="width: 100%">
+                <div class="carousel-caption d-none d-md-block">
+
+                    <p>@item.slider_məzmunu</p>
+                </div>
+            </div>
+}
+              
+              
+            </div>
+
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+
+    </section>
+    <section id="sermon">
+        <div class="container">
+            <div class="row">
+                <div class="sermon_title">
+                    <img src="~/Assets/img/hdg-img.png" alt="" class="img1">
+                    <h2>Xütbələr</h2>
+                    <div class="icon_mosque">
+                        <div class="line"></div>
+                        <img src="~/Assets/img/icon-masjid.png" alt="" class="img2">
+                        <div class="line"></div>
+                    </div>
+                </div>
+                @foreach (var item in Model._sermon)
+    {
+            <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                <div class="single_sermon">
+                    <h4>@item.xutbə_adi</h4>
+                    <p>@item.xutbə_məzmunu.Substring(0,300) ...</p>
+                    <div class="sermon_audio">
+                        <audio controls>
+                            <source src="@item.xutbə_audio" type="audio/ogg">
+                        </audio>
+                    </div>
+                </div>
+            </div>
+}
+             
+                <div class="read_more"><a href="~/Home/Sermons">Daha Ətraflı</a></div>
+            </div>
+        </div>
+    </section>
+    <section id="pillars">
+        <div class="overlay_pillars">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="pillar_title">
+                            <img src="~/Assets/img/hdg-img-2.png" alt="" class="img1">
+                            <h2>İslamın şərtləri</h2>
+                            <div class="icon_mosque">
+                                <div class="line"></div>
+                                <img src="~/Assets/img/icon-masjid.png" alt="" class="img2">
+                                <div class="line"></div>
+                            </div>
+                        </div>
+                        <div class="pillars_content">
+                            <div class="great_round">
+                                <h3>İslamın şərtləri</h3>
+                                <img src="~/Assets/img/icon-masjid.png" alt="" class="img2">
+                                <p>İslamın 5 əsas şərti var. Bunları bilmək hər bir müsəlmana vacibdir.</p>
+                            </div>
+                            <a href="~/Home/Single_pillar/1"><div class="first"><p>Şəhadət</p><img src="~/Assets/img/fing.png" alt=""></div><div class="first_line"></div></a>
+                            <a href="~/Home/Single_pillar/2"><div class="second"><p>Namaz</p><img src="~/Assets/img/prayer.png" alt=""></div><div class="second_line"></div></a>
+                            <a href="~/Home/Single_pillar/3"><div class="third"><p>Zəkat</p><img src="~/Assets/img/zakaat.png" alt=""></div><div class="third_line"></div></a>
+                            <a href="~/Home/Single_pillar/4"><div class="fourth"><p>Həcc</p><img src="~/Assets/img/kaaba.png" alt=""></div><div class="fourth_line"></div></a>
+                            <a href="~/Home/Single_pillar/5"><div class="fifth"><p>Oruc</p><img src="~/Assets/img/quran.png" alt=""></div><div class="fifth_line"></div></a>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="last_news">
+        <div class="container">
+            <div class="row">
+                <div class="sermon_title">
+                    <img src="~/Assets/img/hdg-img.png" alt="" class="img1">
+                    <h2>Son Xəbərlər</h2>
+                    <div class="icon_mosque">
+                        <div class="line"></div>
+                        <img src="~/Assets/img/icon-masjid.png" alt="" class="img2">
+                        <div class="line"></div>
+                    </div>
+                </div>
+                @foreach (var item in Model._news)
+    {
+            <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12" style="margin-bottom: 40px;">
+                <div class="single_news">
+                    <div class="news_img"><img src="@item.xəberin_şəkili" alt=""></div>
+                    <div class="news_date">
+                        <i class="far fa-calendar-alt"></i>
+                        <p>@item.xəberin_əlavə_edilən_gün.ToString().AsDateTime().ToShortDateString()</p>
+                        <i class="fas fa-eye"></i>
+                        <p>@item.xəberin_baxiş_sayi dəfə</p>
+                    </div>
+                    <div class="news_text">
+                        <h4><a href="#">@item.xəberin_adi</a></h4>
+                        <p>@item.xəberin_məzmunu.Substring(0,300) ...</p>
+                        <div class="read_more"><a href="~/Home/single_news/@item.id">Daha Ətraflı</a></div>
+                    </div>
+
+                </div>
+            </div>
+}
+              
+               
+            </div>
+        </div>
+    </section>
+    <section id="remember">
+        <div class="overlay">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-7 col-md-7 col-sm-12 col-xs-12">
+                        <div class="remember_text">
+                            <h2>Rəbbini xatırla</h2>
+                            <h5>Rəhmli və Mərhəmətli Allahın adı ilə</h5>
+                            <p>Həmd olsun aləmlərin Rəbbi olan Allaha, Allahın salamı və salavatı olsun peyğəmbərimiz Muhəmmədə, onun ailəsinə və səhabələrinə. Şahidlik edirəm ki, Allahdan başqa ibadətə layiq olan haqq məbud yoxdur, təkdir və şəriki yoxdur və şahidlik edirəm ki, Muhəmməd Onun qulu və elçisidir.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
+                        <div class="remember_img">
+                            <img src="~/Assets/img/pray.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="info_board">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+                    <div class="info">
+                        <div class="info_title">
+                            <img src="~/Assets/img/hdg-img.png" alt="" class="img1">
+                            <h2>Elanlar</h2>
+                            <div class="icon_mosque">
+                                <div class="line"></div>
+                                <img src="~/Assets/img/icon-masjid.png" alt="" class="img2">
+                                <div class="line"></div>
+                            </div>
+                        </div>
+                        <div class="info_items">
+                            <div class="container">
+                                <div class="row">
+                                    @foreach (var item in Model._advert)
+    {
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                    <div class="single_item">
+                                        <div class="item_img">
+                                            <img src="@item.elanin_şəkili" alt="">
+                                        </div>
+                                        <div class="item_text">
+                                            <a href="#"><h5>@item.elanin_adi</h5></a>
+                                            <p>@item.elanin_məzmunu.Substring(0,100)...</p>
+                                            <div class="read_more"><a href="~/Home/Single_advert/@item.id">Daha Ətraflı</a></div>
+                                        </div>
+                                    </div>
+                                </div>
+}
+                                    
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                    <div class="timer_board">
+                        <div class="timer_title">
+                            <img src="~/Assets/img/hdg-img.png" alt="" class="img1">
+                            <h2>Təqvim</h2>
+                            <div class="icon_mosque">
+                                <div class="line"></div>
+                                <img src="~/Assets/img/icon-masjid.png" alt="" class="img2">
+                                <div class="line"></div>
+                            </div>
+                        </div>
+                        <div class="calendar">
+                            <div class="row">
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12"><iframe id="g2hFrame" style="width: 182px; height: 242px; border: 1px solid #ddd; " frameborder="0" scrolling="no" src="https://www.islamicfinder.org/islamic-calendar/widgetGregorian?type=Gregorian"> </iframe></div>
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12"><iframe id="h2gFrame" style="width: 182px; height: 242px; border: 1px solid #ddd;" frameborder="0" scrolling="no" src="https://www.islamicfinder.org/islamic-calendar/widgetGregorian?type=Hijri"> </iframe></div>
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/jWoXnWCt8tM" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                                </div>
+                            </div>
+
+
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+   

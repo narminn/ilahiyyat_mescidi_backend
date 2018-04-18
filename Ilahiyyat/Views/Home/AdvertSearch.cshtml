@@ -1,0 +1,44 @@
+﻿@model IEnumerable<Ilahiyyat.Models.Advertisement>
+@{
+    ViewBag.Title = "AdvertSearch";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="box1">
+    <div class="overlay2">
+        <img src="~/Assets/img/hdg-img.png" alt="">
+        <p>ELANLAR</p>
+        <!-- <img src="~/Assets/img/mosque.png" alt=""> -->
+    </div>
+</div>
+<section id="advertisements">
+    <div class="container">
+        <div class="row">
+
+            @foreach (Ilahiyyat.Models.Advertisement item in Model)
+            {
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <div class="single_advert">
+                        <div class="advert_img">
+                            <img src="@item.elanin_şəkili" alt="">
+                        </div>
+                        <div class="advert_content">
+                            <a href=""><h4>@item.elanin_adi</h4></a>
+                            <i class="far fa-calendar-alt"></i><p>Baslayir: @item.elanin_başlanqic_günü.ToString().AsDateTime().ToShortDateString()</p>
+                            <i class="far fa-calendar-alt"></i><p>Bitir: @item.elanin_bitdiyi_gün.ToString().AsDateTime().ToShortDateString()</p>
+                            <span>
+                                @item.elanin_məzmunu.Substring(0, 400) ...
+                            </span>
+                            <div class="read_more"><a href="~/Home/Single_advert/@item.id">Daha Ətraflı</a></div>
+                        </div>
+
+                    </div>
+
+                </div>
+            }
+
+
+        </div>
+    </div>
+</section>
+

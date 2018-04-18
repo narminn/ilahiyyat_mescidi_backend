@@ -1,0 +1,81 @@
+﻿@model IEnumerable<Ilahiyyat.Models.Advertisement>
+@{
+    ViewBag.Title = "PartialAdvert";
+    Layout = "~/Areas/Admin_Panel/Views/Shared/Layout.cshtml";
+}
+
+
+<div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
+    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+        <thead>
+            <tr>
+                <th>
+                    Elanın Adi
+                </th>
+                <th>
+                    Elanın şəkili
+                </th>
+                <th>
+                    Elanın məzmunu
+                </th>
+                <th>
+                    Elanın başlanqiç günü
+                </th>
+                <th>
+                    Elanın bitmə günü
+                </th>
+                <th>
+                    Elanın harada olmasi
+                </th>
+                <th>
+                    Elanın təşkil edənin adi
+                </th>
+                <th>
+                    Elanın təşkil edənin nömresi
+                </th>
+                <th>
+                    Elanın təşkil edənin emaili
+                </th>
+        </thead>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.elanin_adi)
+                </td>
+                <td>
+                    <img src="@item.elanin_şəkili" style="max-width:100%; max-height:200px" />
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.elanin_məzmunu)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.elanin_başlanqic_günü)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.elanin_bitdiyi_gün)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.elanin_yeri)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.elanin_təşkilaçinin_adi)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.elanin_təşkilaçinin_nomrəsi)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.elanin_təşkilaçinin_email)
+                </td>
+                <td>
+                    @Html.ActionLink("Yenilə", "Edit", new { id = item.id }) |
+                    @Html.ActionLink("Detallar", "Details", new { id = item.id }) |
+                    @Html.ActionLink("Sil", "Delete", new { id = item.id })
+                </td>
+            </tr>
+        }
+
+    </table>
+</div>
+

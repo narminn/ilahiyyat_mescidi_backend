@@ -1,0 +1,117 @@
+body{
+
+
+}
+.box1{
+  width: 100%;
+  height: 150px;
+  background-image: url(../img/pattran-bg.png);
+  .overlay2{
+    width: 100%;
+    height: 150px;
+    background-color: #fff;
+    opacity: 0.82;
+    p{
+    text-align: center;
+    font-size: 2.5em;
+    font-weight: 600;
+    // line-height: 1px;
+    letter-spacing: 2px;
+    font-family: Roboto;
+    }
+    img{
+      margin-left: 45%;
+      margin-top: 20px;
+    }
+  }
+}
+.contactUs{
+  width: 100%;
+  padding: 25px;
+  .over{
+  background-color: #fff;
+  opacity: 0.92;
+}
+  .name{
+    width: 100%;
+    border: 1px solid $color_green;
+    margin-bottom: 30px;
+    input{
+      padding: 10px;
+    }
+  }
+  .text{
+    width: 100%;
+    
+    textarea{
+      width: 100%;
+      padding: 10px;
+      border: 1px solid $color_green;
+    }
+  }
+  .submit{
+    input{
+      width: 100%;
+      height: 50px;
+      // margin-left: 35%;
+      margin-top: 20px;
+      background: #fff;
+      color: $color_green;
+      border: 1px solid $color_green;
+      &:hover{
+        background: $color_green;
+        color: #fff;
+        transition: .8s ease;
+      }
+    }
+  }
+}
+.location{
+  width: 100%;
+  margin-top: 80px;
+  margin-bottom: 20px;
+  .box{
+    width: 100%;
+    height: 250px;
+    margin-bottom: 30px;
+    background: #f2f2f2;
+    transition:  .7s ease;
+    cursor: pointer;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    &:hover{
+       transform: scale(1.1);
+     }
+    &:hover{
+      background: $color_green;
+          transition: .8s ease;
+      h4{
+        color: #fff;
+      }
+      svg{
+        color: #fff;
+        
+      }
+      h5{
+        color: #fff;
+      }
+    }
+    h4{
+      text-align: center;
+      color: $color_green;
+      padding: 15px;
+    }
+    h5{
+      text-align: center;
+      color: #808080;
+      letter-spacing: 1px;
+      line-height: 35px;
+    }
+  }
+  svg{
+    font-size: 1.5em;
+    color: $color_green;
+    position: relative;
+        left: 46%;
+  }
+}
+

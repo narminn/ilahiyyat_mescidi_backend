@@ -1,0 +1,27 @@
+.books{
+  width: 100%;
+  background-image: url(../img/rf-arabic-writing-books-bookshelf-row-syr100-e1442700696556.jpg);
+
+  .overlay{
+    width: 100%;
+    height: 100%;
+    background: rgba(71, 66, 66, 0.69);
+  }
+  .book{
+    width: 100%;
+    padding: 20px;
+    a{
+      text-decoration: none;
+    }
+    img{
+      width: 100%;
+      height: 100%;
+    }
+    p{
+      font-family: Cursive;
+      text-decoration: none;
+      font-size: 1.5em;
+      letter-spacing: 2px;
+    }
+  }
+}

@@ -1,0 +1,50 @@
+.box1{
+  width: 100%;
+  height: 150px;
+  background-image: url(../img/pattran-bg.png);
+  .overlay2{
+    width: 100%;
+    height: 150px;
+    background-color: #fff;
+    opacity: 0.82;
+    p{
+    text-align: center;
+    font-size: 2.5em;
+    font-weight: 600;
+    // line-height: 1px;
+    letter-spacing: 2px;
+    font-family: Roboto;
+    color: black;
+    }
+    img{
+      margin-left: 45%;
+      margin-top: 20px;
+    }
+  }
+}
+.Bigbox{
+  width: 100%;
+  background-image: url(../img/philosophy-pt.png);
+
+  .overlay{
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    background:$color_green_opacity;
+  }
+}
+.photo{
+  z-index: 99;
+img{
+  width: 100%;
+  height: 250px;
+  object-fit:cover;
+  background-size: cover;
+  margin-top: 50px;
+  &:hover{
+    filter: grayscale(0);
+    transform: scale(1.1);
+    transition: .8s ease;
+  }
+}
+}

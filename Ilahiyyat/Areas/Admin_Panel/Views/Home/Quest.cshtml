@@ -1,0 +1,59 @@
+﻿@model Ilahiyyat.ViewModel.MessageModel
+@{
+    ViewBag.Title = "Quest";
+    Layout = "~/Areas/Admin_Panel/Views/Shared/Layout.cshtml";
+}
+
+<div class="col-md-10">
+    <div class="row">
+        <div class="content-box-large">
+            <div class="panel-heading">
+                <div class="panel-title">Suallar</div>
+            </div>
+            <div class="panel-body">
+                <table cellpadding="0" cellspacing="0" border="0" class="table table-striped table-bordered" id="example">
+                    <thead>
+                        <tr>
+                            <th>No</th>
+                            <th>Sualı göndərənin adı</th>
+                            <th>Sualı göndərənin e-maili</th>
+                            <th>Sual göndərilən gün</th>
+                            <th>Sual</th>
+                            <th>Cavab</th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+
+                        @foreach (var item in Model._quest)
+                        {
+                            <tr class="odd gradeA">
+                                <td>@item.id</td>
+                                <td>@item.sual_user_adi</td>
+                                <td>@item.sual_user_email</td>
+                                <td>@item.sual_əlavə_edilən_gün</td>
+                                <td>@item.sual</td>
+                                <td>@item.cavab</td>
+                                <td>
+                                    <a href="/Admin_Panel/Home/QuestSendEmail" style="color:darkblue;text-decoration:none">Cavab göndər</a>
+                                </td>
+                                <td>@Html.ActionLink("Sil", "DeleteQuest", new { id = item.id })</td>
+                            </tr>
+                        }
+
+
+
+
+
+
+
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+

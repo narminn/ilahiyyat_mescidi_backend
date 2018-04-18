@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ilahiyyetModelStoreContainer" CdmEntityContainer="ilahiyyetEntities">
+    <EntitySetMapping Name="Admins">
+      <EntityTypeMapping TypeName="ilahiyyetModel.Admin">
+        <MappingFragment StoreEntitySet="Admin">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="admin_adi" ColumnName="admin_adi" />
+          <ScalarProperty Name="admin_email" ColumnName="admin_email" />
+          <ScalarProperty Name="admin_şifrəsi" ColumnName="admin_şifrəsi" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Advertisements">
+      <EntityTypeMapping TypeName="ilahiyyetModel.Advertisement">
+        <MappingFragment StoreEntitySet="Advertisement">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="elanin_adi" ColumnName="elanin_adi" />
+          <ScalarProperty Name="elanin_şəkili" ColumnName="elanin_şəkili" />
+          <ScalarProperty Name="elanin_məzmunu" ColumnName="elanin_məzmunu" />
+          <ScalarProperty Name="elanin_başlanqic_günü" ColumnName="elanin_başlanqic_günü" />
+          <ScalarProperty Name="elanin_bitdiyi_gün" ColumnName="elanin_bitdiyi_gün" />
+          <ScalarProperty Name="elanin_yeri" ColumnName="elanin_yeri" />
+          <ScalarProperty Name="elanin_təşkilaçinin_adi" ColumnName="elanin_təşkilaçinin_adi" />
+          <ScalarProperty Name="elanin_təşkilaçinin_nomrəsi" ColumnName="elanin_təşkilaçinin_nomrəsi" />
+          <ScalarProperty Name="elanin_təşkilaçinin_email" ColumnName="elanin_təşkilaçinin_email" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Books">
+      <EntityTypeMapping TypeName="ilahiyyetModel.Book">
+        <MappingFragment StoreEntitySet="Books">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="kitabin_adi" ColumnName="kitabin_adi" />
+          <ScalarProperty Name="kitabin_faili" ColumnName="kitabin_faili" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Contacts">
+      <EntityTypeMapping TypeName="ilahiyyetModel.Contact">
+        <MappingFragment StoreEntitySet="Contact">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="user_adi" ColumnName="user_adi" />
+          <ScalarProperty Name="user_email" ColumnName="user_email" />
+          <ScalarProperty Name="user_nomresi" ColumnName="user_nomresi" />
+          <ScalarProperty Name="user_mesaji" ColumnName="user_mesaji" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Galleries">
+      <EntityTypeMapping TypeName="ilahiyyetModel.Gallery">
+        <MappingFragment StoreEntitySet="Gallery">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="şəkilin_adi" ColumnName="şəkilin_adi" />
+          <ScalarProperty Name="şəkilin_kodu" ColumnName="şəkilin_kodu" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="News">
+      <EntityTypeMapping TypeName="ilahiyyetModel.News">
+        <MappingFragment StoreEntitySet="News">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="xəberin_adi" ColumnName="xəberin_adi" />
+          <ScalarProperty Name="xəberin_məzmunu" ColumnName="xəberin_məzmunu" />
+          <ScalarProperty Name="xəberin_əlavə_edilən_gün" ColumnName="xəberin_əlavə_edilən_gün" />
+          <ScalarProperty Name="xəberin_baxiş_sayi" ColumnName="xəberin_baxiş_sayi" />
+          <ScalarProperty Name="xəberin_şəkili" ColumnName="xəberin_şəkili" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Pillars">
+      <EntityTypeMapping TypeName="ilahiyyetModel.Pillar">
+        <MappingFragment StoreEntitySet="Pillar">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="şərtlərin_adi" ColumnName="şərtlərin_adi" />
+          <ScalarProperty Name="şərtlərin_şəkili" ColumnName="şərtlərin_şəkili" />
+          <ScalarProperty Name="şərtlərin_məzmunu" ColumnName="şərtlərin_məzmunu" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Questions">
+      <EntityTypeMapping TypeName="ilahiyyetModel.Question">
+        <MappingFragment StoreEntitySet="Questions">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="sual" ColumnName="sual" />
+          <ScalarProperty Name="cavab" ColumnName="cavab" />
+          <ScalarProperty Name="sual_user_adi" ColumnName="sual_user_adi" />
+          <ScalarProperty Name="sual_user_email" ColumnName="sual_user_email" />
+          <ScalarProperty Name="sual_əlavə_edilən_gün" ColumnName="sual_əlavə_edilən_gün" />
+          <ScalarProperty Name="sual_baxiş_sayi" ColumnName="sual_baxiş_sayi" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sermons">
+      <EntityTypeMapping TypeName="ilahiyyetModel.Sermon">
+        <MappingFragment StoreEntitySet="Sermon">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="xutbə_adi" ColumnName="xutbə_adi" />
+          <ScalarProperty Name="xutbə_məzmunu" ColumnName="xutbə_məzmunu" />
+          <ScalarProperty Name="xutbə_audio" ColumnName="xutbə_audio" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sliders">
+      <EntityTypeMapping TypeName="ilahiyyetModel.Slider">
+        <MappingFragment StoreEntitySet="Slider">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="slider_şəkili" ColumnName="slider_şəkili" />
+          <ScalarProperty Name="slider_məzmunu" ColumnName="slider_məzmunu" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

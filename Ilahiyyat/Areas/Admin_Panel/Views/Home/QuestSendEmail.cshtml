@@ -1,0 +1,23 @@
+﻿
+@{
+    ViewBag.Title = "QuestSendEmail";
+    Layout = "~/Areas/Admin_Panel/Views/Shared/Layout.cshtml";
+}
+
+<div class="col-md-10">
+    @{
+        if (ViewBag.Error != null)
+        {
+            <h2 class="text-danger"> @ViewBag.Error </h2>
+        }
+    }
+    <form method="post" action="QuestSendEmail">
+        <div class="container">
+            <span class="form-control-static"> Alıcı: </span> <input class="form-control" type="text" name="receiver" /><br />
+            <span class="form-control-static"> Başlıq: </span> <input class="form-control" type="text" name="subject" /><br />
+            <span class="form-control-static"> Mesaj(Sualın cavabı): </span> <input class="form-control" type="text" name="message" /><br />
+            <input class="btn btn-primary" type="submit" value="Göndər" />
+        </div>
+    </form>
+</div>
+

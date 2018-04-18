@@ -1,0 +1,54 @@
+﻿@model Ilahiyyat.Models.Sermon
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Areas/Admin_Panel/Views/Shared/Layout.cshtml";
+}
+
+<h2>Silmək</h2>
+
+<h3>Silmək istədiyinizə əminsiniz?</h3>
+<div>
+    <h4>Xütbə</h4>
+    <hr />
+
+    <div class="col-md-10">
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.xutbə_adi)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.xutbə_adi)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.xutbə_məzmunu)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.xutbə_məzmunu)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.xutbə_audio)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.xutbə_audio)
+            </dd>
+
+        </dl>
+        </div>
+        
+
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="form-actions no-color">
+                <input type="submit" value="Sil" class="btn btn-default" /> |
+                @Html.ActionLink("Əvvələ Qayıt", "Index")
+            </div>
+        }
+    </div>

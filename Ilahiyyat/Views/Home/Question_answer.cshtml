@@ -1,0 +1,56 @@
+﻿@*@model Ilahiyyat.ViewModel.QuestionModel*@
+@model PagedList.IPagedList<Ilahiyyat.Models.Question>
+@using PagedList.Mvc;
+@{
+    ViewBag.Title = "Question_answer";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+    <div class="box1">
+        <div class="overlay2">
+            <img src="~/Assets/img/hdg-img.png" alt="">
+            <p>SUAL-CAVAB</p>
+            <!-- <img src="~/Assets/img/mosque.png" alt=""> -->
+        </div>
+    </div>
+    <section id="question_answer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
+                    <div class="questions">
+                        @foreach (var item in Model)
+    {
+                    <div class="single_question">
+
+                        <h3><i class="fas fa-thumbtack"></i>@item.sual</h3>
+                        <p> @item.cavab</p>
+                        <div class="line"></div>
+                        <div class="date">
+                            <p><i class="far fa-calendar-alt"></i>Tarix:<span>@item.sual_əlavə_edilən_gün</span></p>
+
+                        </div>
+                    </div>
+}
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            @*Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount*@
+                            <div style="position:relative;left:50%;display:inline-block;padding:10px;">
+                                @Html.PagedListPager(Model, page => Url.Action("Question_answer", new { page, sortOrder = ViewBag.CurrentSort, currentFilter = ViewBag.CurrentFilter }))
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                    <div class="any_question">
+                        <a href="/Home/QuestionPage">Bizə Sualınız Var?</a>
+                    </div>
+                    <iframe id="g2hFrame" style="width: 220px; height: 278px; border: 1px solid #ddd;padding: 20px; margin-bottom: 50px;" frameborder="0" scrolling="no" src="https://www.islamicfinder.org/islamic-calendar/widgetGregorian?type=Gregorian"> </iframe>
+                    <iframe id="h2gFrame" style="width: 220px; height: 278px; border: 1px solid #ddd; padding: 20px;margin-bottom: 50px;" frameborder="0" scrolling="no" src="https://www.islamicfinder.org/islamic-calendar/widgetGregorian?type=Hijri"> </iframe>
+
+                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/jWoXnWCt8tM" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+   

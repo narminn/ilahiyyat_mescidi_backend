@@ -1,0 +1,105 @@
+
+#header{
+	width: 100%;
+	//position: fixed;
+	// z-index: 99;
+	.pray_times{
+		width: 100%;
+		height: 100%;
+		background-image: url(../img/top_bg.png);
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-size: cover;
+		h6{
+			text-align: center;
+			color: white;
+			font-style: italic;
+		}
+		.overlay{
+			width: 100%;
+			height: 100%;
+			background-color: $color_green_opacity;
+			padding: 25px 0px;
+		
+		.logo{
+			width: 80%;
+			height: 100%;
+			position: relative;
+			
+			img{
+				width: 100%;
+				height: 140px;
+				object-fit:cover;
+			}
+
+		}
+		
+			h3{
+				
+				line-height: 110px;
+				position: relative;
+				color: white;
+				font-style: italic;
+			}
+			p{
+				color: white;
+			}
+		
+	}
+	.time{
+		width: 80px;
+		height: 80px;
+		border-radius: 100%;
+		float: left;
+		border: 2px dotted white;
+		margin-left: 10px;
+		margin-top: 30px;
+		cursor: pointer;
+		transition:.7s ease;
+		&:hover{
+		border: 2px solid white;
+		}
+		h6{
+			color: white;
+			text-align: center;
+			font-size: 16px;
+			line-height: 50px;
+			margin-bottom: 0;
+		}
+		p{
+			color: white;
+			text-align: center;
+			font-size: 15px;
+			line-height: 0px;
+		}
+	}
+}
+.menu{
+	width: 100%;
+	.bg-light{
+		background-color: white !important;
+		border-bottom: 3px solid $color_green;
+
+		li{
+			transition:1.2s ease;
+			a{
+			font-size: 20px;
+			margin-left: 10px;
+			margin-right: 10px;
+			&:hover{
+				color: $color_green;
+
+			}
+			}
+			
+		}
+	}
+}
+
+}
+.fixed{
+	position: fixed;
+	top: 0;
+	z-index: 99;
+	width: 100%;
+}

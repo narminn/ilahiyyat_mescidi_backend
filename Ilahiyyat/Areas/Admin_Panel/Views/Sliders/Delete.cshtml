@@ -1,0 +1,45 @@
+﻿@model Ilahiyyat.Models.Slider
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Areas/Admin_Panel/Views/Shared/Layout.cshtml";
+}
+
+<h2>Silmək</h2>
+
+<h3>Silmək istədiyinizə əminsiz?</h3>
+<div>
+    <h4>Slayder</h4>
+    <hr />
+
+    <div class="col-md-10">
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.slider_şəkili)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.slider_şəkili)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.slider_məzmunu)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.slider_məzmunu)
+            </dd>
+
+        </dl>
+        </div>
+
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="form-actions no-color">
+                <input type="submit" value="Sil" class="btn btn-default" /> |
+                @Html.ActionLink("Əvvələ Qayıt", "Index")
+            </div>
+        }
+    </div>

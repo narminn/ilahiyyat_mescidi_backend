@@ -1,0 +1,40 @@
+#single_sermon{
+	width: 100%;
+	padding: 50px 0px;
+	.srmn{
+		width: 100%;
+		margin-bottom: 30px;
+		&:hover{
+			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+		}
+		.sermon_img{
+			overflow: hidden;
+			cursor: pointer;
+			img{
+				width: 100%;
+				height: 400px;
+				object-fit:cover;
+
+			}
+			&:hover img{
+				transform:scale(1.2);
+				transition:all 1s ease-in;
+				filter:brightness(.5);
+			}
+		}
+		.sermon_audio{
+			width: 100%;
+			padding: 10px;
+		}
+		.sermon_content{
+			width: 100%;
+			padding: 10px;
+			h4{
+				color: $color_green;
+			}
+			p{
+				color: black;
+			}
+		}
+	}
+}

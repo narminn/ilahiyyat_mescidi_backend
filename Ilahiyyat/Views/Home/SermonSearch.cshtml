@@ -1,0 +1,37 @@
+﻿@model IEnumerable<Ilahiyyat.Models.Sermon>
+@{
+    ViewBag.Title = "SermonSearch";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="box1">
+    <div class="overlay2">
+        <img src="~/Assets/img/hdg-img.png" alt="">
+        <p>XÜTBƏLƏR</p>
+        <!-- <img src="~/Assets/img/mosque.png" alt=""> -->
+    </div>
+</div>
+<section id="sermon">
+    <div class="container">
+        <div class="row">
+            @foreach (var item in Model)
+            {
+                <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                    <div class="single_sermon">
+                        <h4>@item.xutbə_adi</h4>
+                        <p>@item.xutbə_məzmunu.Substring(0, 270) ...</p>
+                        <div class="sermon_audio">
+                            <audio controls>
+                                <source src="@item.xutbə_audio" type="audio/ogg">
+                            </audio>
+                        </div>
+                        <div class="read_more"><a href="/Home/Single_sermon/@item.id">Daha Ətraflı</a></div>
+                    </div>
+                </div>
+            }
+
+
+        </div>
+    </div>
+</section>
+

@@ -1,0 +1,38 @@
+﻿@model IEnumerable<Ilahiyyat.Models.Book>
+@{
+    ViewBag.Title = "PartialBook";
+    Layout = "~/Areas/Admin_Panel/Views/Shared/Layout.cshtml";
+}
+
+<div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
+    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+        <thead>
+            <tr>
+                <th>
+                    Kitabın adi
+                </th>
+                <th>
+                    Kitabın faili
+                </th>
+        </thead>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.kitabin_adi)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.kitabin_faili)
+                </td>
+                <td>
+                    @Html.ActionLink("Yenilə", "Edit", new { id = item.id }) |
+                    @Html.ActionLink("Detalları", "Details", new { id = item.id }) |
+                    @Html.ActionLink("Sil", "Delete", new { id = item.id })
+                </td>
+            </tr>
+        }
+
+    </table>
+</div>
+

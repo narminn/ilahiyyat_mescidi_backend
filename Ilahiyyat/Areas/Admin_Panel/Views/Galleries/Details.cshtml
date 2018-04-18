@@ -1,0 +1,37 @@
+﻿@model Ilahiyyat.Models.Gallery
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/Admin_Panel/Views/Shared/Layout.cshtml";
+}
+
+<h2>Ətraflı</h2>
+
+<div>
+    <h4>Qalereya</h4>
+    <hr />
+    <div class="col-md-10">
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.şəkilin_adi)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.şəkilin_adi)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.şəkilin_kodu)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.şəkilin_kodu)
+            </dd>
+
+        </dl>
+        </div>
+    </div>
+    <p>
+        @Html.ActionLink("Düzəlt", "Edit", new { id = Model.id }) |
+        @Html.ActionLink("Əvvələ Qayıt", "Index")
+    </p>

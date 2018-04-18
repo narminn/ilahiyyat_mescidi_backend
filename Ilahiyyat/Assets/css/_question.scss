@@ -1,0 +1,50 @@
+#your_question{
+	width: 100%;
+	padding: 50px 0px;
+	.question_content{
+		width: 100%;
+		border: 1px solid rgba(192,192,192,.4);
+		cursor: pointer;
+		padding: 20px;
+		.box{
+			width: 100%;
+			margin-bottom: 40px;
+			&:nth-child(3) label{
+				position: relative;
+				top:-150px;
+			}
+			label{
+				width: 100px;
+				color: $color_green;
+			}
+			input{
+				width: 70%;
+				
+			}
+			textarea{
+				width: 70%;
+			}
+							
+		}
+		.submit{
+			input{
+			width: 250px;
+		height: 40px;
+		text-align: center;
+		border: 1px solid $color_green;
+		position: relative;
+		line-height: 36px;
+		cursor: pointer;
+		transition:.5s ease;
+		margin-bottom: 20px;
+position: relative;
+left: calc(50% - 125px);
+border-radius: 50px;
+		&:hover{
+			background-color: $color_green;
+			color: white;
+		}
+	}
+		}
+	}
+}
